@@ -1,0 +1,59 @@
+
+/*[ grid-images ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * Layout 1
+ *
+\*/
+.element-grid-images.layout-1 {
+    .slide-image {
+        margin: 0 -20px;
+        position: relative;
+        z-index: 0;
+
+        .item-slick {
+            padding: 0 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .wrap-arrow-slick {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+
+            .arow-slick {
+                font-size: 30px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background: #000;
+                cursor: pointer;
+                position: absolute;
+                top: -27px;
+                transition: all 0.2s;
+
+                &:hover {
+                    background: $primary-color;
+                }
+
+                &.prev-slick {
+                    left: 0px;
+                }
+
+                &.next-slick {
+                    right: 0px;
+                }
+            }
+        }
+    }
+}

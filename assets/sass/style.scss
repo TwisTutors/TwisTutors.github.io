@@ -1,0 +1,123 @@
+/*------------------------------------------------------------------
+Project:  TutorX
+Version:  1.0
+Last change:  
+Assigned to:  
+Primary use:  
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[LAYOUT]
+
+* body
+  + Header / header
+  + Content
+        - Section Layouts / div .name-section
+        - Sidebar / .element-sidebar
+            - Search / .widget_search
+            - Categories / .widget_categories
+            - Post / .hun-widget-posts
+            - Tag / .widget_tag_cloud
+        ...
+  + Footer / footer
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[COLOR CODES]
+
+# Text Color      :  
+# Primary Color   :  
+
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TYPOGRAPHY]
+
+Body            : 16px/1.75 Raleway, Poppins, Open Sans, Arial, sans-serif;
+Title           : 39px/1.2 Raleway, Poppins, Open Sans, Arial, sans-serif;
+Paragrap        : 16px/1.75 Raleway, Poppins, Open Sans, Arial, sans-serif;
+Input, textarea : 16px/1.75 Raleway, Poppins, Open Sans, Arial, sans-serif;
+-------------------------------------------------------------------*/
+
+@import 'base/_variables04';
+@import 'base/_mixins-master';
+@import 'base/_reset';
+@import 'base/_typography';
+@import 'base/_animation';
+
+/*\
+ *
+ * Component
+ *
+\*/
+@import 'header/_header';
+@import 'header/_mobile-menu';
+@import 'footer/_footer';
+@import 'sidebar/_sidebar';
+@import 'forms/_forms';
+@import 'features/_back-to-top';
+@import 'features/_pre-loading';
+
+/*\
+ *
+ * Blocks
+ *
+\*/
+@import 'blocks/_page-title';
+@import 'blocks/_pagination';
+@import 'blocks/_bl-event-list';
+@import 'blocks/_bl-event-detail';
+@import 'blocks/_bl-blogs-list';
+@import 'blocks/_bl-blogs-detail';
+@import 'blocks/_bl-courses-list';
+@import 'blocks/_bl-courses-detail';
+@import 'blocks/_bl-products-list';
+@import 'blocks/_bl-products-detail';
+@import 'blocks/_bl-portfolio-list';
+@import 'blocks/_bl-gallery-list';
+@import 'blocks/_bl-404-page';
+@import 'blocks/_bl-contact-page';
+
+
+/*\
+ *
+ * Elements
+ *
+\*/
+
+@import 'elements/_search';
+@import 'elements/_login-popup';
+@import 'elements/_main-slider';
+@import 'elements/_heading';
+@import 'elements/_image-box';
+@import 'elements/_features';
+@import 'elements/_button';
+@import 'elements/_list-courses';
+@import 'elements/_countdown';
+@import 'elements/_testimonial';
+@import 'elements/_posts';
+@import 'elements/_grid-images';
+@import 'elements/_icon-box';
+@import 'elements/_accordion';
+@import 'elements/_pricing-table';
+@import 'elements/_video-box';
+@import 'elements/_counters';
+@import 'elements/_counter-box';
+
+/*\
+ *
+ * Sections
+ *
+\*/
+@import 'section/_sections';
+@import 'section/_about';
+@import 'section/_features';
+@import 'section/_courses';
+@import 'section/_upcoming';
+@import 'section/_news';
+@import 'section/_awards';
+@import 'section/_faq';
+@import 'section/_pricing';
+@import 'section/_sign-up';
+@import 'section/_testimonial';
+@import 'section/_counters';
+@import 'section/_subscribe';
+@import 'section/_login-popup';

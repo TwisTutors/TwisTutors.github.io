@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TwisTutors</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="https://i.imgur.com/264tAgT.png"/>
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/ionicons/css/ionicons.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/libs/slick/slick.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/magnific-popup/magnific-popup.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/animsition/animsition.min.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/animate/animate.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style-1.css?v=1">
+	<!--===============================================================================================-->
+
+</head>
+<body class="animsition">
+
+<div id="wrapper-container">
+
+	<!-- Header -->
+	<header class="site-header sticky-header header-overlay layout-2">
+		<div class="header-inner element-to-stick">
+			<div class="container">
+				<div class="wrap-content-header">
+					<div class="header-logo">
+						<a href="index.html" class="logo">
+							TwisTutors
+						</a>
+					</div>
+
+					<nav class="main-navigation">
+						<ul class="menu-lists">
+							<li class="menu-item-has-children">
+								<a href="index.html">
+									Home
+								</a>
+							</li>
+							<li class="menu-item-has-children">
+								<a href="shop.html">
+									Shop
+								</a>
+								<ul class="sub-menu">
+									<li>
+										<a href="about.html">
+											Books
+										</a>
+									</li>
+								</ul>
+							<li class="menu-item-has-children">
+								<a href="about.html">
+									About
+								</a>
+							
+
+								<ul class="sub-menu">
+									<li>
+										<a href="about.html">
+											Get to know us
+										</a>
+									</li>
+
+									<li>
+										<a href="events.html">
+											Events
+										</a>
+									</li>
+									<li>
+										<a href="portfolio.html">
+											Portfolio
+										</a>
+									</li>
+									<li>
+										<a href="faq.html">
+											FAQs
+										</a>
+									</li>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<a href="courses.html">
+									Tutoring Subjects
+								</a>
+							</li>
+
+							<li >
+								<a href="blog.html">
+									Blog
+								</a>
+							</li>
+
+							<li>
+								<a href="contact.html">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="menu-right">
+						<div class="element-search layout-1">
+							<div class="search-button"></div>
+
+							<div class="search-form">
+								<span class="close-form"></span>
+
+								<form role="search" method="get" class="form-search" >
+									<input type="text" class="search-field" name="s"/>
+									<span class="search-notice"> Hit enter to search or ESC to close</span>
+								</form>
+
+								<ul class="list-search list-unstyled">
+								</ul>
+							</div>
+						</div>
+
+
+
+						<!-- shortcode login popup -->
+						<div class="element-login-popup layout-1">
+							<div class="login-links">
+								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a>
+							</div>
+
+							<div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide">
+								<div class="loginwrapper">
+									<!-- form register -->
+									<div class="login-popup box-register">
+										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+										<div class="inner-login">
+											<h3 class="title">
+												<span class="current-title">Register</span>
+												<span>
+															<a href="#login" class="display-box" data-display=".box-login">Login</a>
+														</span>
+											</h3>
+
+											<div class="form-row">
+												<div class="wrap-form">
+													<div class="form-desc">
+														We will need...
+													</div>
+
+													<form id="registerform">
+														<p class="login-username">
+															<input type="text" placeholder="Username"   class="input">
+														</p>
+
+														<p class="login-email">
+															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="text-mail">
+															We send your registration email to this address.
+														</p>
+
+														<p class="button-submit">
+															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Register"/>
+															<input type="hidden" name="redirect_to" value=""/>
+														</p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end form register -->
+
+									<!-- form login -->
+									<div class="login-popup box-login">
+										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+										<div class="inner-login">
+											<h3 class="title">
+														<span>
+															<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+														</span>
+
+												<span class="current-title">Login</span>
+											</h3>
+
+											<div class="form-row">
+												<div class="wrap-form">
+													<div class="form-desc"> We will need... </div>
+
+													<form id="loginform">
+														<p class="login-username">
+															<input type="text" placeholder="Username"   class="input">
+														</p>
+
+														<p class="login-email">
+															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="login-remember">
+															<input type="checkbox" name="rememberme" id="rememberme" value="forever">  Remember Me
+														</p>
+
+														<p class="button-submit">
+															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Login"/>
+															<input type="hidden" name="redirect_to" value=""/>
+														</p>
+
+														<p class="link-bottom"><a href="#losspw" class="display-box"
+																				  data-display=".box-lostpass"></a>
+														</p>
+													</form>
+
+													<p class="link-bottom"><a href="#losspw" class="display-box"
+																			  data-display=".box-lostpass">Lost your password? </a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end form login -->
+
+									<!-- form lost passwords -->
+									<div class="login-popup box-lostpass">
+										<div class="login-popup box-lostpass">
+											<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+											<div class="inner-login">
+												<h3 class="title">
+															<span>
+																<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+															</span>
+
+													<span class="current-title"> Reset Password</span>
+												</h3>
+
+												<div class="form-row">
+													<form name="lostpasswordform" id="lostpasswordform" method="post">
+														<p class="description"> Please enter your username or email address. You will receive a link to create a new password via email.
+														</p>
+
+														<p class="login-username">
+															<input placeholder="Username or email" type="text" name="user_login_lostpass" id="user_login_lostpass" class="input"/>
+														</p>
+
+														<p>
+															<input type="submit" name="wp-submit-lostpass" id="wp-submit-lostpass" class="button button-primary button-large" value="Reset password"/>
+														</p>
+
+														<p class="link-bottom"> Are you a member?
+															<a href="#login" class="display-box" data-display=".box-login"> Sign in now </a>
+														</p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end lost passwords -->
+								</div>
+							</div>
+						</div>
+						<!-- end shortcode login -->
+
+						<!-- Button toggle menu-mobile -->
+						<div class="menu-mobile-effect navbar-toggle">
+							<div class="icon-wrap">
+								<i class="ion-navicon"></i>
+							</div>
+						</div>
+						<!-- end Button toggle menu-mobile -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<!--SAM WORK ON THIS PART, WORK ON COPYING AND PASTING CODE-->
+	<nav class="mobile-menu-container mobile-effect">
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="index.html">
+					Home
+				</a>
+			</li>
+
+			<li class="menu-item-has-children">
+				<a href="about.html">
+					About
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="about.html">
+							About
+						</a>
+					</li>
+
+					<li>
+						<a href="events.html">
+							Events
+						</a>
+					</li>
+
+					<li>
+						<a href="single-events.html">
+							Single events
+						</a>
+					</li>
+
+					<li>
+						<a href="shop.html">
+							Shop
+						</a>
+					</li>
+
+					<li>
+						<a href="single-shop.html">
+							Single shop
+						</a>
+					</li>
+
+					<li>
+						<a href="pricing.html">
+							Pricing
+						</a>
+					</li>
+
+					<li>
+						<a href="portfolio.html">
+							Portfolio
+						</a>
+					</li>
+
+					<li>
+						<a href="gallery.html">
+							Gallery
+						</a>
+					</li>
+
+					<li>
+						<a href="faq.html">
+							FAQs
+						</a>
+					</li>
+
+					<li>
+						<a href="404page.html">
+							404
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu-item-has-children">
+				<a href="courses.html">
+					Courses
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="courses.html">
+							Courses
+						</a>
+					</li>
+
+					<li>
+						<a href="single-courses.html">
+							Single courses
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu-item-has-children">
+				<a href="blog.html">
+					Blog
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="blog.html">
+							Blog
+						</a>
+					</li>
+
+					<li>
+						<a href="single-blog.html">
+							Single blog
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="contact.html">
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- end Header -->
+	
+	<!-- Main content -->
+	<div id="main-content">
+
+		<!-- features -->
+		<div class="sec-features-02" style="background-image: url(assets/images/home/bg-png-01.png);">
+			<div class="container">
+				<div class="element-heading layout-2 text-light align-center">
+					<div class="subtitle">
+						TwisTutors
+					</div>
+
+					<h3 class="title">
+						Your one-stop-shop to tutoring. 
+					</h3>
+				</div>
+
+				<div class="element-button layout-2 text-thin size-large shape-round text-center">
+					<a href="https://discord.gg/MeV93SR7h8" class="button">
+						Join our discord server
+					</a>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="element-image-box layout-3">
+							<div class="wrap-element">
+								<div class="text-element">
+									<h3 class="title">
+										One-to-One Tutoring
+									</h3>
+
+									<div class="description">
+										Our tutors provide individual help, ensuring that the setbacks of remote learning are no longer a problem, helping you address anything you need help with.
+									</div>
+								</div>
+
+								<div class="image-element">
+									<a  href="javascript:void(0)"><img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/qfTiFCc_360x491.jpg" alt="IMG"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="element-image-box layout-3">
+							<div class="wrap-element">
+								<div class="text-element">
+									<h3 class="title">
+										Top Schools
+									</h3>
+
+									<div class="description">
+										Our tutors come from the top high schools and colleges in the United States, so no question is a question for us.
+									</div>
+								</div>
+
+								<div class="image-element">
+									<a  href="javascript:void(0)"><img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/AlePcI1_360x491.jpg" alt="IMG"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="element-image-box layout-3">
+							<div class="wrap-element">
+								<div class="text-element">
+									<h3 class="title">
+										Wide Range of Instruction
+									</h3>
+
+									<div class="description">
+										Remote learning has placed all of us in an unexpected situation. Our tutors can help with AP and SAT/ACT Prep.
+									</div>
+								</div>
+
+								<div class="image-element">
+									<a  href="javascript:void(0)"><img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/TYXary8_360x491.jpg" alt="IMG"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end features -->
+
+		<!-- about -->
+		<div class="sec-about-07" style="background-image: url(assets/images/home/bg-png-03.png);">
+			<div class="intro-sec">
+				<div class="container">
+					<div class="element-heading layout-2 text-light align-center">
+						<h3 class="title">
+							We saw a need
+						</h3>
+					</div>
+
+					<div class="text-sec">
+						<p>
+							We began tutoring because of our passion to make a difference in our students' lives. We, as advanced students ourselves, know the struggles our fellow peers are confronting. TwistTutors was formed to help students excel in their studies. We have the best tutors to help bring our purposes to life.
+						</p>
+
+						<img src="assets/images/home/sign-01.png" alt="IMG">
+					</div>
+				</div>
+			</div>
+				
+			<div class="features-sec row-padding-left">
+				<div class="column-sec">
+					<div class="element-heading layout-2 text-light align-left">
+						<h3 class="title">
+							Our tutors come from
+						</h3>
+					</div>
+
+					<ul class="list-sec">
+						<li>
+							<i class="icon ion-android-checkbox-outline"></i>
+							Cornell University
+						</li>
+
+						<li>
+							<i class="icon ion-android-checkbox-outline"></i>
+							Amherst College
+						</li>
+
+						<li>
+							<i class="icon ion-android-checkbox-outline"></i>
+							Brooklyn Technical High School
+						</li>
+						<li>
+							<i class="icon ion-android-checkbox-outline"></i>
+							The Bronx High School of Science
+						</li>
+					</ul>
+
+					<div class="element-button layout-2 text-thin size-large shape-round">
+						<a href="https://discord.gg/MeV93SR7h8" class="button">
+							GET STARTED
+						</a>
+					</div>
+				</div>
+
+				<div class="column-sec">
+					<div class="element-image-box layout-1 style-3">
+						<div class="wrap-element">
+							<div class="image-element">
+								<img src="https://i.imgur.com/YlD8wsY.jpg" alt="IMG">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+
+		<!-- about -->
+		<div class="sec-about-08">
+			<div class="intro-sec">
+				<div class="container">
+					<div class="element-heading layout-2 align-center">
+						<h3 class="title">
+							Have any questions?
+						</h3>
+
+						<span class="description">
+							<div class="element-button layout-2 text-thin size-large shape-round">
+								<a href="contact.html" class="button">
+									Let us know
+								</a>
+							</div>		
+						</span>
+					</div>
+
+					<div class="row justify-content-center">
+						<div class="col-xl-10">
+							<div class="element-video-box layout-1">
+								<div class="video-box">
+									<img src="https://i.imgur.com/PXoi6n3.png" alt="IMG">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="features-sec" style="background-image: url(assets/images/home/bg-png-04.png);">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-4 text-center text-md-right">
+							<img src="assets/images/home/single-png-01.png" alt="IMg">
+						</div>
+
+						<div class="col-md-3 col-lg-2 text-center text-md-right">
+							<h3 class="title-sec">
+								Tutoring For All Ages And Subjects
+							</h3>
+						</div>
+
+						<div class="col-md-5 col-lg-6 text-center text-md-left">
+							<ul class="list-sec">
+								<li>
+									<span><a href="javascript:void(0)">SAT</a></span>
+								</li>
+
+								<li>
+									<span><a href="javascript:void(0)">ACT</a></span>
+								</li>
+
+								<li>
+									<span><a href="javascript:void(0)">AP Exams</a></span>
+								</li>
+
+								<li>
+									<span><a href="javascript:void(0)">General Subjects</a></span>
+								</li>
+
+								<li>
+									<span><a href="javascript:void(0)">+Much More</a></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->	
+
+		<!-- courses -->
+		<div class="sec-courses-02">
+			<div class="container">
+				<div class="element-heading layout-2 align-center">
+					<h3 class="title">
+						Take advantage of our free webinars or docusets made to help you!
+					</h3>
+				</div>
+
+				<div class="element-list-courses layout-2">
+					<div class="wrap-element">
+						<div class="row">
+							<div class="col-md-6 col-lg-4">
+								<a href="single-courses.html" class="item-course">
+									<div class="image-course">
+										<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/636610343961500870-GettyImages-508896288_360x491.jpg" alt="IMG">
+									</div>
+
+									<div class="text-course">
+										<div class="price-course">
+											Free
+										</div>
+
+										<h4 class="title-course">
+											<span>Take advantage of time</span>
+										</h4>
+
+										<div class="description-course">
+											A free docuset that will help you control your time better
+										</div>
+
+										<div class="foot-item">
+											<div class="info-course">
+												<span class="item-info">
+													<i class="icon ion-document"></i>
+													1 Docuset
+												</span>
+
+												<span class="item-info">
+													<i class="icon ion-android-star"></i>
+													5.0
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-6 col-lg-4">
+								<a href="single-courses.html" class="item-course">
+									<div class="image-course">
+										<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/download_360x491.jpeg" alt="IMG">
+									</div>
+
+									<div class="text-course">
+										<div class="price-course">
+											Free
+										</div>
+
+										<h4 class="title-course">
+											<span>College Admissions 101</span>
+										</h4>
+
+										<div class="description-course">
+											Given by a Amherst College Tutor
+										</div>
+
+										<div class="foot-item">
+											<div class="info-course">
+												<span class="item-info">
+													<i class="icon ion-document"></i>
+													Lecture
+												</span>
+
+												<span class="item-info">
+													<i class="icon ion-android-star"></i>
+													5.0
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-md-6 col-lg-4">
+								<a href="single-courses.html" class="item-course">
+									<div class="image-course">
+										<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/download_360x491.png" alt="IMG">
+									</div>
+
+									<div class="text-course">
+										<div class="price-course">
+											Free
+										</div>
+
+										<h4 class="title-course">
+											<span>Discord in a nutshell</span>
+										</h4>
+
+										<div class="description-course">
+											Discord's hard. But we're here to help!
+										</div>
+
+										<div class="foot-item">
+											<div class="info-course">
+												<span class="item-info">
+													<i class="icon ion-document"></i>
+													Educational Video
+												</span>
+
+												<span class="item-info">
+													<i class="icon ion-android-star"></i>
+													4.5
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end courses -->
+
+		<!-- about 
+		<div class="sec-about-09">
+			<div class="row no-gutters">
+				<div class="col-md-6">
+					<div class="element-image-box layout-1 style-4">
+						<div class="wrap-element">
+							<div class="image-element">
+								<img src="assets/images/home/single-image-02.jpg" alt="IMG">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="element-image-box layout-1 style-4">
+						<div class="wrap-element">
+							<div class="image-element">
+								<img src="assets/images/home/single-image-03.jpg" alt="IMG">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		end about -->
+
+		<!-- sign-up -->
+		<div class="sec-sign-up-01" style="background-image: url(assets/images/home/bg-png-05.png);">
+			<div class="container">
+				<div class="element-heading layout-2 text-light align-center">
+					<h3 class="title">
+						Sign up for our newsletter!
+					</h3>
+
+					<span class="description">
+						Sign up for our newsletter to stay up-to-date with all of our offerings and educational seminars!
+				<div class="subscribe-form-01">
+					<form class="content-form" action="javascript:void(0)">
+						<label>
+							<input type="text" placeholder="Name *">
+						</label>
+
+						<label>
+							<input type="text" placeholder="Email *">
+						</label>
+
+						<label>
+							<input type="text" placeholder="Phone *">
+						</label>
+
+						<button>
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end sign-up -->
+
+		<!-- testimonial -->
+		<div class="sec-testimonial-01">
+			<div class="bg-sec" style="background-image: url(assets/images/home/bg-png-06.png);"></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/Screen_Shot_2021-03-08_at_9.40.17_PM_563x439.png" alt="IMG">
+					</div>
+
+					<div class="col-lg-6 align-self-center">
+						<div class="element-testimonial layout-1">
+							<div class="row">
+								<div class="col-md-5">
+									<div class="img-testimonial"></div>
+								</div>
+
+								<div class="col-md-7">
+									<div class="slide-testimonial js-call-slick-col" data-numofshow="1" data-numofscroll="1" data-loopslide="1" data-autoscroll="0" data-speedauto="6000" data-customdot="0" data-responsive="[1, 1], [1, 1], [1, 1], [1, 1], [1, 1]">
+										<div class="slide-slick">
+											<div class="testimonial-item">
+												<div class="content">
+													"Math was always so hard for me. But Dan's hands-on approach made learning math fun, interactive, and very convenient! "
+												</div>
+
+												<div class="author">
+													<div class="ava">
+														<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/download_2_563x439.jpeg" alt="IMG">
+													</div>
+
+													<div class="info">
+														<a href="javascript:void(0)" class="name">
+															John Baldwin
+														</a>
+
+														<span class="description">
+															Math Tutee, TwisTutors
+														</span>
+													</div>
+												</div>
+											</div>
+
+											<div class="testimonial-item">
+												<div class="content">
+													When I first started getting help with Twist, I was unsure of myself. But the fantastic tutors helped me realise that writing isn't as hard as I thought! I've discovered a newfound passion for writing!
+												</div>
+
+												<div class="author">
+													<div class="ava">
+														<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/images_51x51.jpeg" alt="IMG">
+													</div>
+
+													<div class="info">
+														<a href="javascript:void(0)" class="name">
+															Angela Fernandez
+														</a>
+
+														<span class="description">
+															Writing Tutee, TwisTutors
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="wrap-arrow-slick">
+											<div class="arow-slick prev-slick slick-arrow">
+												<i class="ion ion-ios-arrow-thin-left"></i>
+											</div>
+
+											<div class="arow-slick next-slick slick-arrow">
+												<i class="ion ion-ios-arrow-thin-right"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end testimonial -->
+
+		<!-- about -->
+		<div class="sec-about-10 row-padding-left">
+			<div class="column-sec">
+				<div class="element-heading layout-2 text-light align-left">
+					<h3 class="title">
+						Stop struggling with school! Get tutoring today
+					</h3>
+
+					<div class="description">
+						Join the hundreds of students that have gotten real results in their academics!
+					</div>
+				</div>
+
+				<div class="element-button layout-2 size-large text-thin shape-round">
+					<a href="contact.html" class="button">
+						Get in touch
+					</a>
+				</div>
+			</div>
+
+			<div class="column-sec">
+				<div class="element-image-box layout-1 style-3">
+					<div class="wrap-element">
+						<div class="image-element">
+							<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/15E43A6F-3941-471A-BF4A81AECDC8C8AA_source_944x351.jpg" alt="IMG">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+
+		<!-- counters -->
+		<div class="sec-counters-01">
+			<div class="container">
+				<div class="element-counters layout-1 style-2">
+					<div class="counter-boxes">
+						<div class="item">
+							<div class="counter-box">
+								<div class="number">
+									<span class="counter">70</span>+
+								</div>
+
+								<h3 class="title">
+									Students Tutored
+								</h3>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="counter-box">
+								<div class="number">
+									<span class="counter">140</span>
+								</div>
+
+								<h3 class="title">
+									Hours spent tutoring
+								</h3>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="counter-box">
+								<div class="number">
+									<span class="counter">111</span>
+								</div>
+
+								<h3 class="title">
+									Worldwide Users
+								</h3>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="counter-box">
+								<div class="number">
+									<span class="number_counter animated">
+										<span class="counter">1530</span>
+									</span>
+								</div>
+
+								<h3 class="title">
+									Average SAT score of our tutors                 
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end counters -->
+
+		<!-- news -->
+		<div class="sec-news-02">
+			<div class="container">
+				<div class="element-heading layout-2 align-center">
+					<h3 class="title">
+						Latest News
+					</h3>
+				</div>
+
+				<div class="element-posts layout-1">
+					<div class="wrap-element">
+						<div class="row">
+							<div class="col-md-6 col-lg-4">
+								<div class="item-post">
+									<div class="image-post">
+										<a href="single-blog.html">
+											<img src="assets/images/home/post-01.jpg" alt="IMG">
+										</a>
+									</div>
+
+									<div class="text-post">
+										<h4 class="title-post">
+											<a href="single-blog.html">
+												One of our Tutors makes AIME!
+											</a>
+										</h4>
+
+										<ul class="info-post">
+											<li class="hight-light">
+												By <a href="blog.html">Dan</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-lg-4">
+								<div class="item-post">
+									<div class="image-post">
+										<a href="single-blog.html">
+											<img src="http://www.simpleimageresizer.com/_uploads/photos/186424da/Screen_Shot_2021-03-09_at_4.25.30_PM_360x258.png" alt="IMG">
+										</a>
+									</div>
+
+									<div class="text-post">
+										<h4 class="title-post">
+											<a href="single-blog.html">
+												Server Reaches 100 Members!
+											</a>
+										</h4>
+
+										<ul class="info-post">
+											<li class="hight-light">
+												By <a href="blog.html">Eric</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-lg-4">
+								<div class="item-post">
+									<div class="image-post">
+										<a href="single-blog.html">
+											<img src="assets/images/home/post-03.jpg" alt="IMG">
+										</a>
+									</div>
+
+									<div class="text-post">
+										<h4 class="title-post">
+											<a href="single-blog.html">
+												SAT Day is March 13th!
+											</a>
+										</h4>
+
+										<ul class="info-post">
+											<li class="hight-light">
+												By <a href="blog.html">Khadija</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end news -->
+
+		<!-- about -->
+		<div class="sec-about-11" style="background-image: url(assets/images/home/bg-png-12.png);">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-lg-6">
+						<img src="assets/images/home/single-png-03.png" alt="IMG">
+					</div>
+
+					<div class="col-lg-6 align-self-center">
+						<div class="element-heading layout-2 align-left">
+							<h3 class="title">
+								Want to Tutor with Us?
+							</h3>
+						</div>
+						<div class="element-button layout-2 size-large text-thin shape-round">
+							<a href="https://forms.gle/Dufyj2qx2EgAkzpR7" class="button">
+								Sign up now!
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+	</div>
+	<!-- end Main content -->
+
+	<!-- Footer -->
+	<footer class="site-footer style-1" style="background-image: url(assets/images/home/bg-png-02.png);">
+		<div class="footer-top">
+			
+			<div class="container">
+				<div class="content-footer-top">
+					<p>
+						TwisTutors
+					</p>
+
+					<p>
+						<a href="mailto:twisttutors@gmail.com">
+							twisttutors@gmail.com
+						</a>
+					</p>
+				</div>
+
+				<div class="social-links">
+					<ul class="socials">
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-facebook"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-twitter"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-pinterest-p"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-linkedin"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	<!-- end Footer -->
+</div>
+
+<div id="back-to-top" class="btn-back-to-top"><i class="ion ion-ios-arrow-thin-up"></i></div>
+
+<!--===============================================================================================-->
+<script src="assets/libs/jquery/jquery-3.4.1.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/bootstrap/popper.js?v=1"></script>
+<script src="assets/libs/bootstrap/bootstrap.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/animsition/animsition.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/slick/slick.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/select2/select2.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/countdown/jquery.plugin.min.js?v=1"></script>
+<script src="assets/libs/countdown/jquery.countdown.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/isotope/isotope.pkgd.min.js?v=1"></script>
+<script src="assets/libs/isotope/modul.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/waypoint/jquery.waypoints.min.js?v=1"></script>
+<script src="assets/libs/countterup/jquery.counterup.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/js/main.js?v=1"></script>
+
+
+</body>
+</html>

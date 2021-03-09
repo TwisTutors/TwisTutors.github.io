@@ -1,0 +1,70 @@
+/*[ Login ]
+//////////////////////////////////////////////////////////////////*/
+
+
+/*\
+ *
+ * In site-header.layout-1
+ *
+\*/
+.site-header.layout-1 {
+    .element-login-popup.layout-1 {
+        .login-links {
+            a {
+                color: $main-menu-color;
+                padding: 0;
+                margin-left: 13px;
+                margin-right: auto;
+                &:hover {
+                    color: $main-menu-hover-color;
+                }
+            }
+        }
+    }
+}
+
+/*\
+ *
+ * In site-header.layout-2
+ *
+\*/
+.site-header.layout-2 {
+    .element-login-popup.layout-1 {
+        .login-links {
+            a {
+                color: $main-menu-color;
+                padding: 0;
+                margin-left: 13px;
+                margin-right: auto;
+                &:hover {
+                    color: $main-menu-hover-color;
+                }
+            }
+        }
+    }
+}
+
+
+/*\
+ *
+ * Custom form
+ *
+\*/
+#bp-popup-login button.mfp-close {
+    background: transparent !important;
+}
+
+.login-popup {
+    form {
+        input[type="submit"] {
+            background: $primary-color;
+            color: #fff;
+            transition: all .2s;
+            &:hover {
+                background: darken($primary-color, 15%);
+            }
+        }
+    }
+}
+
+

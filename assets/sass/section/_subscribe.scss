@@ -1,0 +1,46 @@
+/*[ subscribe ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * sec-subscribe-01
+ *
+\*/
+.sec-subscribe-01 {
+	margin-top: -35px;
+	padding-top: 125px;
+	padding-bottom: 208px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+	.heading-sec {
+		margin-bottom: 30px;
+		text-align: center;
+
+		.title {
+			font-weight: 700;
+			color: $title-color-01;
+			font-size: 20px;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+		}
+
+		.description {
+			font-weight: 300;
+			font-size: 18px;
+			color: $text-color-01;
+			line-height: 1.75;
+		}
+	}
+	@media (max-width: 991px) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@media (max-width: 768px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}

@@ -1,0 +1,228 @@
+.bl-blogs-list {
+	padding-top: 9px;
+	
+	.col,
+	[class*="col-"] {
+		padding-bottom: 40px;
+	}
+
+	.item-blog {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		transition: all .3s;
+
+		&.has-post-thumbnail {
+			.image-blog {
+				.date-blog {
+					bottom: 0;
+					top: auto;
+				}
+			}
+			.text-blog {
+				border-top: none;
+				.author-blog {
+					margin-top: -16px;
+				}
+				.title-blog {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.image-blog {
+			position: relative;
+			.post-formats-wrapper {
+				.slide-image {
+					position: relative;
+					.wrap-arrow-slick {
+						pointer-events: none;
+						position: absolute;
+						z-index: 1;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						align-items: center;
+						padding: 0 15px;
+						overflow: hidden;
+						.arow-slick {
+							pointer-events: auto;
+							cursor: pointer;
+							font-size: 18px;
+							line-height: 1;
+							color: #fff;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 35px;
+							height: 35px;
+							border-radius: 50%;
+							background: rgba(17, 17, 17, .4);
+							transition: all .2s;
+							&:hover {
+								background: $primary-color;
+							}
+							&.slick-arrow.slick-hidden {
+								display: none;
+							}
+							&[aria-disabled="true"] {
+								visibility: hidden;
+							}
+
+							&.prev-slick {
+								transform: translateX(-60px);
+							}
+
+							&.next-slick {
+								transform: translateX(60px);
+							}
+						}
+					}
+					.item-slick {
+						img {
+							width: 100%;
+						}
+					}
+
+					&:hover {
+						.wrap-arrow-slick {
+							.arow-slick {
+								transform: translateX(0) !important;
+							}
+						}
+					}
+				}
+			}
+			.date-blog {
+				pointer-events: none;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 1.5;
+				color: #fff;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				bottom: auto;
+				right: 0;
+				padding: 6px 11px;
+				&::before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-color: $title-color-01;
+					opacity: .5;
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					left: 0;
+				}
+			}
+			img {
+				width: 100%;
+			}
+		}
+
+		.text-blog {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			padding: 0px 15px 15px 15px;
+			border: 1px solid #ebebeb;
+			transition: all .3s;
+			.author-blog {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 1.5;
+				color: $title-color-01;
+				position: relative;
+				z-index: 1;
+				margin-top: 8px;
+				a {
+					color: inherit;
+					transition: all .2s;
+					&:hover {
+						color: $primary-color;
+					}
+				}
+				.ava-author {
+					display: block;
+					background-color: #fff;
+					width: 36px;
+					border-radius: 50%;
+					padding: 5px;
+					margin-left: -5px;
+					margin-bottom: 5px;
+					img {
+						width: 100%;
+						border-radius: 50%;
+					}
+				}
+
+				& + .title-blog {
+					margin-top: 15px;
+				}
+			}
+			.title-blog {
+				flex-grow: 1;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 1.375;
+				color: $title-color-01;
+				word-break: break-word;
+				margin-top: 50px;
+				margin-bottom: 15px;
+				a {
+					color: inherit;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;  
+					overflow: hidden;
+					max-height: calc(1.375 * 2em);
+					transition: all .2s;
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+			.info-blog {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+				letter-spacing: 16px;
+				li {
+					display: inline-block;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 1.7;
+					color: $text-color-01;
+					word-break: break-word;
+					letter-spacing: normal;
+					a {
+						color: inherit;
+						transition: all .2s;
+						&:hover {
+							color: $primary-color;
+						}
+					}
+					i {
+						color: $primary-color;
+						margin-right: 2px;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			box-shadow: 13px 15px 15px 0px rgba(105, 105, 105, 0.08);
+			.text-blog {
+				border-color: transparent;
+			}
+		}
+	}
+}
+

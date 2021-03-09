@@ -1,0 +1,211 @@
+
+/*[ Button ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * Layout 1
+ *
+\*/
+.element-button.layout-1 {
+	.button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $title-color-01;
+        text-transform: uppercase;
+        background-color: transparent;
+        display: inline-block;
+        padding: 0px 0px 6px 0px;
+        position: relative;
+        transition: all .5s;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $primary-color;
+            opacity: 1;
+            position: absolute;
+            top: auto;
+            bottom: 0px;
+            left: 0;
+            right: auto;
+        }
+
+        &:hover {
+            color: $primary-color;
+
+            &:before {
+                animation: scaleBorderBottomBtn 1s forwards;
+                -webkit-animation: scaleBorderBottomBtn 1s forwards;
+                -moz-animation: scaleBorderBottomBtn 1s forwards;
+                -ms-animation: scaleBorderBottomBtn 1s forwards;
+            }
+        }
+    }
+}
+
+
+/*\
+ *
+ * Layout 2
+ *
+\*/
+.element-button.layout-2 {
+    .button {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0px 30px;
+        background: $primary-color;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+        border: none;
+        transition: all .2s;
+        position: relative;
+        z-index: 0;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            z-index: -1;
+            background-color: darken($primary-color, 10%);
+            border-radius: inherit;
+            opacity: 0;
+            transition: all .3s linear;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+            right: auto;
+        }
+        &::after {
+            bottom: 0;
+            left: auto;
+            right: 0;
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+                height: 100%;
+                top: 100%;
+                bottom: auto;
+                left: 100%;
+                right: auto;
+                opacity: 1;
+                transform: translate(-100%, -100%);
+            }
+            &:after {
+                width: 100%;
+                height: 100%;
+                bottom: 100%;
+                left: auto;
+                right: 100%;
+                opacity: 1;
+                transform: translate(100%, 100%);
+            }
+        }
+
+        &.focus, 
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    &.text-thin {
+        .button {
+            font-weight: 500;
+        }
+    }
+
+    &.size-small .button {
+        height: 42px;
+    }
+    &.size-normal .button {
+        height: 46px;
+    }
+    &.size-large .button {
+        height: 49px;
+    }
+
+    &.shape-square {
+        .button {
+            border-radius: 0px;
+        }
+    }
+
+    &.shape-round {
+        &.size-small .button {
+            border-radius: 21px;
+        }
+        &.size-normal .button {
+            border-radius: 23px;
+        }
+        &.size-large .button {
+            border-radius: 24px;
+        }
+    }
+}
+
+
+/*\
+ *
+ * Layout 3
+ *
+\*/
+.element-button.layout-3 {
+    .button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $title-color-01;
+        display: inline-block;
+        position: relative;
+        transition: all .5s;
+
+        &::before {
+            content: '\f3d6';
+            font-family: Ionicons;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 1;
+            color: $primary-color;
+            vertical-align: middle;
+            margin-right: 9px;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &.text-underline {
+        .button {
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                width: calc(100% - 32px);
+                height: 1px;
+                position: absolute;
+                bottom: 7px;
+                right: 0;
+                background-color: $title-color-01;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+/*[ testimonial ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * sec-testimonial-01
+ *
+\*/
+.sec-testimonial-01 {
+    padding-top: 140px;
+    padding-bottom: 150px;
+    background-color: $primary2-color;
+    position: relative;
+    z-index: 1;
+
+    .bg-sec {
+        pointer-events: none;
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        width: 100%;
+        height: calc(100% + 250px);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 90px;
+        padding-bottom: 80px;
+    }
+    @media (max-width: 768px) {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+}
+
+
+/*\
+ *
+ * sec-testimonial-02
+ *
+\*/
+.sec-testimonial-02 {
+    padding-top: 150px;
+    padding-bottom: 145px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: auto;
+        background: $primary2-color;
+        opacity: .9;
+    }
+
+    @media (max-width: 991px) {
+        padding-top: 100px;
+        padding-bottom: 95px;
+    }
+    @media (max-width: 768px) {
+        padding-top: 55px;
+        padding-bottom: 50px;
+    }
+}

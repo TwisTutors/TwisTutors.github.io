@@ -1,0 +1,22 @@
+/*[ faq ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * sec-faq-01
+ *
+\*/
+.sec-faq-01 {
+	padding-top: 110px;
+	padding-bottom: 8px;
+	
+	[class*="col-"] {
+		padding-bottom: 111px;
+	}
+
+	.element-heading {
+		.description {
+			font-size: 16px;
+		}
+	}
+}

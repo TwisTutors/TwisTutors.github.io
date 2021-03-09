@@ -1,0 +1,80 @@
+/*[ news ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * sec-news-01
+ *
+\*/
+.sec-news-01 {
+	padding-top: 170px;
+	padding-bottom: 100px;
+
+	.element-heading {
+		margin-bottom: 40px;
+	}
+}
+
+
+/*\
+ *
+ * sec-news-02
+ *
+\*/
+.sec-news-02 {
+	padding-top: 140px;
+	padding-bottom: 100px;
+
+	.element-heading {
+		max-width: 760px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+/*\
+ *
+ * sec-news-03
+ *
+\*/
+.sec-news-03 {
+	padding-top: 65px;
+	padding-bottom: 70px;
+}
+
+
+/*\
+ *
+ * sec-news-04
+ *
+\*/
+.sec-news-04 {
+	padding-top: 140px;
+}
+@media (max-width: 767px) {
+	.sec-news-01,.sec-news-02  {
+		padding-top: 70px;
+		padding-bottom: 30px;
+ 	}
+
+	/*\
+     *
+     * sec-news-03
+     *
+    \*/
+	.sec-news-03 {
+		padding-top: 35px;
+		padding-bottom: 40px;
+	}
+
+
+	/*\
+     *
+     * sec-news-04
+     *
+    \*/
+	.sec-news-04 {
+		padding-top: 70px;
+	}
+}

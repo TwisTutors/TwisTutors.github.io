@@ -1,0 +1,132 @@
+
+.bl-gallery-list {
+	padding-top: 100px;
+	padding-bottom: 120px;
+	text-align: center;
+	[class*="col-"] {
+		padding-bottom: 40px;
+	}
+	.filter-gallery {
+		display: inline-block;
+		margin-bottom: 55px;
+		position: relative;
+		z-index: 0;
+		&::before {
+			content: '';
+			display: block;
+			width: calc(100% - 29px - 29px);
+			height: 1px;
+			background-color: #ebebeb;
+			position: absolute;
+			z-index: -1;
+			bottom: 5px;
+			left: 29px;
+		}
+		.item-filter {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 1.5;
+			color: $title-color-01;
+			text-transform: uppercase;
+			display: inline-block;
+			border-bottom: 1px solid transparent;
+			padding: 8px 0;
+			margin: 5px 29px;
+			transition: all .2s;
+			&:hover {
+				color: $primary-color;
+			}
+			&.active {
+				color: $primary-color;
+				border-color: $primary-color;
+			}
+		}
+	}
+	.item-gallery {
+		overflow: hidden;
+		position: relative;
+		z-index: 0;
+		img {
+			width: 100%;
+			border-radius: inherit;
+		}
+		.overlay-image {
+			font-size: 45px;
+			line-height: 1;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: inherit;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			transition: all .2s;
+			opacity: 0;
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				background: $primary-color;
+				opacity: .35;
+			}
+			i {
+				transition: all .2s;
+				transform: scale(0);
+			}
+		}
+		&:hover {
+			.overlay-image {
+				opacity: 1;
+				i {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	.load-more-gallery {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.5;
+		color: $title-color-01;
+		text-transform: uppercase;
+		display: inline-block;
+		margin-top: 15px;
+		padding: 0px 0px 6px 0px;
+		position: relative;
+		transition: all .5s;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 3px;
+			background: $primary-color;
+			opacity: 1;
+			position: absolute;
+			top: auto;
+			bottom: 0px;
+			left: 0;
+			right: auto;
+		}
+
+		&:hover {
+			color: $primary-color;
+			&:before {
+				animation: scaleBorderBottomBtn 1s forwards;
+				-webkit-animation: scaleBorderBottomBtn 1s forwards;
+				-moz-animation: scaleBorderBottomBtn 1s forwards;
+				-ms-animation: scaleBorderBottomBtn 1s forwards;
+			}
+		}
+	}
+}
+

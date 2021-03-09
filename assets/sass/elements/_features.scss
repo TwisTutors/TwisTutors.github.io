@@ -1,0 +1,164 @@
+
+/*[ Features ]
+//////////////////////////////////////////////////////////////////*/
+
+
+/*\
+ *
+ * Layout 1
+ *
+\*/
+.element-features.layout-1 {
+    .wrap-element {
+        margin-bottom: 40px;
+
+        .title-element {
+            font-weight: 700;
+            font-size: 20px;
+            color: $title-color-01;
+            word-break: break-word;
+            margin-bottom: 23px;
+        }
+
+        .list-feature {
+            list-style-type: none;
+            margin: 0;
+
+            .item-feature {
+                margin: 0;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.777777;
+                color: $text-color-01;
+                word-break: break-word;
+                display: block;
+                padding: 0px 0px 0px 20px;
+                position: relative;
+                transition: all .2s;
+                margin-bottom: 5px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    background: $primary-color;
+                }
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+    &.space-large {
+        .wrap-element {
+            .list-feature {
+                .item-feature {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    &.layout-style-2 {
+        .wrap-element {
+            margin-bottom: 46px;
+
+            .title-element {
+                font-weight: 600;
+                font-size: 18px;
+                color: $title-color-01;
+                line-height: 1.1;
+                display: inline-block;
+                border-bottom: 1px solid $title-color-01;
+                margin-bottom: 28px;
+            }
+
+            .list-feature {
+                .item-feature {
+                    margin-bottom: 7px;
+                    line-height: 1.666666;
+                    color: $text-color-01;
+
+                    &::before {
+                        width: 6px;
+                        height: 6px;
+                        background: $primary-color;
+                        top: 12px;
+                    }
+
+                    a {
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.space-large {
+            .wrap-element {
+                .list-feature {
+                    .item-feature {
+                        margin-bottom: 26px;
+                    }
+                }
+            }
+        }
+    }
+    &.layout-style-3 {
+        .wrap-element {
+            margin-bottom: 46px;
+
+            .title-element {
+                font-weight: 600;
+                font-size: 18px;
+                color: #fff;
+                margin-bottom: 26px;
+            }
+
+            .list-feature {
+                .item-feature {
+                    margin-bottom: 7px;
+                    line-height: 1.666666;
+                    color: #c6c6c6;
+
+                    &::before {
+                        width: 6px;
+                        height: 6px;
+                        background: $primary-color;
+                        top: 12px;
+                    }
+
+                    a {
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &.space-large {
+            .wrap-element {
+                .list-feature {
+                    .item-feature {
+                        margin-bottom: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,31 @@
+/*[ sign-up ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * sec-sign-up-01
+ *
+\*/
+.sec-sign-up-01 {
+	padding-top: 185px;
+	background-color: $primary2-color;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+	.element-heading {
+		max-width: 650px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 43px;
+	}
+
+	@media (max-width: 991px) {
+		padding-top: 150px;
+	}
+	@media (max-width: 768px) {
+		padding-top: 60px;
+	}
+}

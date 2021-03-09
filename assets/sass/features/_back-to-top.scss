@@ -1,0 +1,34 @@
+#back-to-top {
+	cursor: pointer;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	position: fixed;
+	z-index: 999;
+	background: $primary-color;
+	width: 60px;
+	height: 60px;
+	bottom: 60px;
+	right: 35px;
+	transform: translateY(130px);
+	transition: all .3s;
+
+	&.scrolldown {
+		transform: translateY(0px);
+	}
+
+	&:hover {
+		background: darken($primary-color, 15%);
+	}
+
+	@media (max-width: 991px) {
+		font-size: 25px;
+		line-height: 39px;
+		padding-top: 2px;
+		width: 39px;
+		height: 39px;
+		bottom: 20px;
+		right: 15px;
+	}
+}

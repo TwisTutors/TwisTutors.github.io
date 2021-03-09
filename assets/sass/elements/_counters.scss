@@ -1,0 +1,203 @@
+
+/*[ element-counters ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * Layout 1
+ *
+\*/
+.element-counters.layout-1 {
+    .counter-boxes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+        z-index: 0;
+        padding: 61px 0;
+        &::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: calc(100% - 93px);
+            position: absolute;
+            z-index: -1;
+            top: 78px;
+            left: -15px;
+            right: auto;
+            background: $primary-color;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 10000px;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: auto;
+            background: $primary2-color;
+        }
+        .item {
+            flex-basis: 20%;
+            flex-grow: 1;
+            position: relative;
+            text-align: center;
+            padding: 30px 10px;
+            &:before {
+                content: '';
+                display: none;
+                width: 1px;
+                height: 62px;
+                background: #ebebeb;
+                transform: rotateZ(15deg);
+                position: absolute;
+                top: 6px;
+                right: 0;
+            }
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }
+            .number {
+                display: block;
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 1.2;
+                color: #fff;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 50px;
+                    height: 3px;
+                    background: #fff;
+                    margin: 6px auto 0px auto;
+                }
+            }
+            .title {
+                display: block;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 1.5;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            @media (max-width: 991px) {
+                flex-basis: 50%;
+            }
+
+            @media (max-width: 575px) {
+                flex-basis: 100%;
+                width: auto !important;
+                margin-bottom: 0px !important;
+                margin-top: 0px !important;
+            }
+        }
+    }
+
+    &.style-2 {
+        .counter-boxes{
+            padding: 0;
+            align-items: flex-start;
+            &::before,
+            &::after {
+                display: none;
+            }
+            .item {
+                flex-basis: unset;
+                flex-grow: unset;
+                padding: 20px 5.2%;
+                max-width: 25%;
+                line-height: 1.5;
+                &:before {
+                    display: block;
+                    height: 40px;
+                    background: #e1e1e1;
+                    transform: rotateZ(22deg);
+                    top: 37px;
+                    right: -5px;
+                }
+                &:last-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+                .number {
+                    font-weight: 600;
+                    font-size: 45px;
+                    line-height: 1;
+                    color: #000;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                    &::after {
+                        display: none;
+                    }
+                }
+                .title {
+                    font-weight: 300;
+                    font-size: 16px;
+                    color: #727272;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        @media (max-width: 1299px) {
+            .counter-boxes {
+                .item {
+                    padding: 20px 4%;
+                }
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .counter-boxes {
+                .item {
+                    padding: 20px 3%;
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            .counter-boxes {
+                flex-wrap: wrap;
+                .item {
+                    flex-basis: unset;
+                    max-width: 40%;
+                    width: 40%;
+                    padding: 20px 5%;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            .item {
+                .number {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            .counter-boxes {
+                .item {
+                    max-width: 100%;
+                    width: 100% !important;
+                    flex-basis: unset;
+                    margin-bottom: 0px !important;
+                    margin-top: 0px !important;
+                }
+            }
+        }
+    }
+}

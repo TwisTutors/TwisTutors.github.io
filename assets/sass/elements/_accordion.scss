@@ -1,0 +1,75 @@
+
+/*[ accordion ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * Layout 1
+ *
+\*/
+.element-accordion.layout-1 {
+    .wrap-element {
+        .accordion-item {
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px 0px rgba(105, 105, 105, 0.08); 
+            padding: 3px 25px;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .question {
+                font-family: inherit;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.5;
+                color: $title-color-01;
+                display: flex;
+                align-items: center;
+                padding: 15px 35px 15px 0px;
+                position: relative;
+                cursor: pointer;
+                transition: all .2s;
+
+                &::after {
+                    content: '\f48a';
+                    font-family: Ionicons;
+                    font-size: 20px;
+                    color: #727272;
+                    line-height: 1;
+                    position: absolute;
+                    top: 50%;
+                    right: 0px;
+                    transform: translateY(-50%);
+                }
+
+                &:hover {
+                    color: $primary-color;
+                    &:after {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            .answer {
+                font-weight: 400;
+                line-height: 1.75;
+                color: $text-color-01;
+                border-top: 1px solid #ebebeb;
+                padding: 22px 0 29px 0;
+            }
+
+            &.active-dropdown {
+                .question {
+                    color: $primary-color;
+
+                    &::after {
+                        content: '\f463';
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

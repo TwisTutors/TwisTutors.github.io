@@ -1,0 +1,92 @@
+
+/*[ Video box ]
+//////////////////////////////////////////////////////////////////*/
+
+/*\
+ *
+ * Layout 1
+ *
+\*/
+.element-video-box.layout-1 {
+	.video-box {
+		position: relative;
+		margin-bottom: 0px;
+		.overlay {
+			position: absolute;
+			width: 80px;
+			height: 72px;
+			top: auto;
+			left: auto;
+			bottom: 0;
+			right: 0;
+			background: transparent;
+			.btn-open-video {
+				width: 100%;
+				height: 100%;
+				border: none;
+				line-height: 1;
+				border-radius: 0;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: $primary-color;
+				position: relative;
+				z-index: 0;
+				&::before,
+				&::after {
+					content: '';
+					display: block;
+					width: 50%;
+					height: 50%;
+					position: absolute;
+					z-index: -1;
+					background-color: darken($primary-color, 10%);
+					border-radius: inherit;
+					opacity: 0;
+					transition: all .3s linear;
+				}
+				&::before {
+					top: 0;
+					left: 0;
+					right: auto;
+				}
+				&::after {
+					bottom: 0;
+					left: auto;
+					right: 0;
+				}
+				&:hover {
+					&:before {
+						width: 100%;
+						height: 100%;
+						top: 100%;
+						bottom: auto;
+						left: 100%;
+						right: auto;
+						opacity: 1;
+						transform: translate(-100%, -100%);
+					}
+					&:after {
+						width: 100%;
+						height: 100%;
+						bottom: 100%;
+						left: auto;
+						right: 100%;
+						opacity: 1;
+						transform: translate(100%, 100%);
+					}
+				}
+				i {
+					font-size: 28px;
+					padding-left: 0px;
+				}
+			}
+
+			@media (max-width: 575px) {
+				width: 50px;
+				height: 42px;
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+
+/*[ Page title ]
+//////////////////////////////////////////////////////////////////*/
+
+.page-title {
+	.main-top {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 0;
+		.overlay-top-header {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: auto;
+			background: #000;
+			opacity: .65;
+		}
+		.content {
+			padding-top: 120px;
+			padding-bottom: 122px;
+			text-align: center;
+			h1 {
+				font-weight: 700;
+				font-size: 50px;
+				line-height: 1.2;
+				color: #fff;
+				word-break: break-word;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;  
+				overflow: hidden;
+				max-height: calc(1.2 * 2em);
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.wrap-breadcrumb {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				ul, ol, li {
+					list-style-type: none;
+					margin: 0;
+				}
+				.breadcrumbs {
+					li {
+						display: inline-block;
+						font-weight: 300;
+						font-size: 16px;
+						line-height: 1.625;
+						color: #fff;
+						word-break: break-word;
+						position: relative;
+						.breadcrum-icon {
+							font-size: 10px;
+							color: #fff;
+							display: inline-block;
+							padding-left: 4px;
+							padding-right: 4px;
+							transform: translateY(-2px);
+						}
+						a {
+							color: #fff;
+							transition: all .2s;
+ 							&:hover {
+								color: $primary-color;
+							}
+						}
+					}
+				}
+			}
+			.description {
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 1.5;
+				color: #fff;
+				word-break: break-word;
+				max-width: 500px;
+				margin-right: auto;
+				margin-left: auto;
+				margin-top: 6px;
+				margin-bottom: 6px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		.main-top {
+			h1 {
+				font-size: 40px;
+			}
+			.content {
+				padding-top: 50px;
+				padding-bottom: 52px;
+			}
+		}
+	}
+	@media (max-width: 575px) {
+		.main-top {		
+			.content {
+				h1 {
+					font-size: 35px;
+				}
+			}
+		}
+	}
+}
