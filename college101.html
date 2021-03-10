@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TwisTutors-College Admissions 101</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="https://i.imgur.com/264tAgT.png"/>
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/ionicons/css/ionicons.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/libs/slick/slick.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/magnific-popup/magnific-popup.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/animsition/animsition.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1">
+	<!--===============================================================================================-->
+
+</head>
+<body class="animsition">
+
+<div id="wrapper-container">
+
+	<!-- Header -->
+	<header class="site-header sticky-header layout-1">
+		<div class="header-inner element-to-stick">
+			<div class="container">
+				<div class="wrap-content-header">
+					<div class="header-logo">
+						<a href="index.html" class="logo">
+							TwisTutors
+						</a>
+					</div>
+
+					<nav class="main-navigation">
+						<ul class="menu-lists">
+							<li class="menu-item-has-children">
+								<a href="index.html">
+									Home
+								</a>
+							</li>
+	<!--				
+							<li class="menu-item-has-children">
+								<a href="shop.html">
+									Shop
+								</a>
+								<ul class="sub-menu">
+									<li>
+										<a href="about.html">
+											Books
+										</a>
+									</li>
+								</ul>
+								-->	
+							<li>
+								<a href="about.html">
+									About
+								</a>
+							</li>
+							<li>
+								<a href="faq.html">
+									FAQs
+								</a>
+							</li>
+							<li>
+								<a href="events.html">
+									Events
+								</a>
+							</li>
+<!--
+							<li >
+								<a href="blog.html">
+									Blog
+								</a>
+							
+							</li>
+-->
+<li>
+								<a href="contact.html">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="menu-right">
+						<div class="element-search layout-1">
+							<div class="search-button"></div>
+
+							<div class="search-form">
+								<span class="close-form"></span>
+
+								<form role="search" method="get" class="form-search" >
+									<input type="text" class="search-field" name="s"/>
+									<span class="search-notice"> Hit enter to search or ESC to close</span>
+								</form>
+
+								<ul class="list-search list-unstyled">
+								</ul>
+							</div>
+						</div>
+
+						<!-- shortcode login popup -->
+						<div class="element-login-popup layout-1">
+							<div class="login-links">
+								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a>
+							</div>
+
+							<div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide">
+								<div class="loginwrapper">
+									<!-- form register -->
+									<div class="login-popup box-register">
+										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+										<div class="inner-login">
+											<h3 class="title">
+												<span class="current-title">Register</span>
+												<span>
+															<a href="#login" class="display-box" data-display=".box-login">Login</a>
+														</span>
+											</h3>
+
+											<div class="form-row">
+												<div class="wrap-form">
+													<div class="form-desc">
+														We will need...
+													</div>
+
+													<form id="registerform">
+														<p class="login-username">
+															<input type="text" placeholder="Username"   class="input">
+														</p>
+
+														<p class="login-email">
+															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="text-mail">
+															We send your registration email to this address.
+														</p>
+
+														<p class="button-submit">
+															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Register"/>
+															<input type="hidden" name="redirect_to" value=""/>
+														</p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end form register -->
+
+									<!-- form login -->
+									<div class="login-popup box-login">
+										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+										<div class="inner-login">
+											<h3 class="title">
+														<span>
+															<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+														</span>
+
+												<span class="current-title">Login</span>
+											</h3>
+
+											<div class="form-row">
+												<div class="wrap-form">
+													<div class="form-desc"> We will need... </div>
+
+													<form id="loginform">
+														<p class="login-username">
+															<input type="text" placeholder="Username"   class="input">
+														</p>
+
+														<p class="login-email">
+															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="login-remember">
+															<input type="checkbox" name="rememberme" id="rememberme" value="forever">  Remember Me
+														</p>
+
+														<p class="button-submit">
+															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Login"/>
+															<input type="hidden" name="redirect_to" value=""/>
+														</p>
+
+														<p class="link-bottom"><a href="#losspw" class="display-box"
+																				  data-display=".box-lostpass"></a>
+														</p>
+													</form>
+
+													<p class="link-bottom"><a href="#losspw" class="display-box"
+																			  data-display=".box-lostpass">Lost your password? </a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end form login -->
+
+									<!-- form lost passwords -->
+									<div class="login-popup box-lostpass">
+										<div class="login-popup box-lostpass">
+											<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+											<div class="inner-login">
+												<h3 class="title">
+															<span>
+																<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+															</span>
+
+													<span class="current-title"> Reset Password</span>
+												</h3>
+
+												<div class="form-row">
+													<form name="lostpasswordform" id="lostpasswordform" method="post">
+														<p class="description"> Please enter your username or email address. You will receive a link to create a new password via email.
+														</p>
+
+														<p class="login-username">
+															<input placeholder="Username or email" type="text" name="user_login_lostpass" id="user_login_lostpass" class="input"/>
+														</p>
+
+														<p>
+															<input type="submit" name="wp-submit-lostpass" id="wp-submit-lostpass" class="button button-primary button-large" value="Reset password"/>
+														</p>
+
+														<p class="link-bottom"> Are you a member?
+															<a href="#login" class="display-box" data-display=".box-login"> Sign in now </a>
+														</p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end lost passwords -->
+								</div>
+							</div>
+						</div>
+						<!-- end shortcode login -->
+						<!-- Button toggle menu-mobile -->
+						<div class="menu-mobile-effect navbar-toggle">
+							<div class="icon-wrap">
+								<i class="ion-navicon"></i>
+							</div>
+						</div>
+						<!-- end Button toggle menu-mobile -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="mobile-menu-container mobile-effect">
+		<ul class="nav navbar-nav">
+			<li class="menu-item-has-children">
+				<a href="index.html">
+					Home
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="index.html">
+							Home 01
+						</a>
+					</li>
+
+					<li>
+						<a href="home2.html">
+							Home 02
+						</a>
+					</li>
+
+					<li>
+						<a href="home3.html">
+							Home 03
+						</a>
+					</li>
+
+					<li>
+						<a href="home4.html">
+							Home 04
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu-item-has-children">
+				<a href="about.html">
+					About
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="about.html">
+							About
+						</a>
+					</li>
+
+					<li>
+						<a href="events.html">
+							Events
+						</a>
+					</li>
+
+					<li>
+						<a href="single-events.html">
+							Single events
+						</a>
+					</li>
+
+					<li>
+						<a href="shop.html">
+							Shop
+						</a>
+					</li>
+
+					<li>
+						<a href="single-shop.html">
+							Single shop
+						</a>
+					</li>
+
+					<li>
+						<a href="pricing.html">
+							Pricing
+						</a>
+					</li>
+
+					<li>
+						<a href="portfolio.html">
+							Portfolio
+						</a>
+					</li>
+
+					<li>
+						<a href="gallery.html">
+							Gallery
+						</a>
+					</li>
+
+					<li>
+						<a href="faq.html">
+							FAQs
+						</a>
+					</li>
+
+					<li>
+						<a href="404page.html">
+							404
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu-item-has-children">
+				<a href="courses.html">
+					Courses
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="courses.html">
+							Courses
+						</a>
+					</li>
+
+					<li>
+						<a href="single-courses.html">
+							Single courses
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="menu-item-has-children">
+				<a href="blog.html">
+					Blog
+				</a>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="blog.html">
+							Blog
+						</a>
+					</li>
+
+					<li>
+						<a href="single-blog.html">
+							Single blog
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="contact.html">
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- end Header -->
+	
+	<!-- Main content -->
+	<div id="main-content">
+		<div class="content-area">
+
+			<div class="site-content">
+				<main class="site-main">
+					<div class="wrap-main-content">
+						<div class="container">
+							<div class="bl-event-detail">
+								<div class="row">
+									<div class="col-lg-9">
+										<div class="detail-event">
+											<h3 class="title-event">
+												College Admissions 101
+											</h3>
+
+											<div class="image-event">
+												<img src="assets/images/events/event-detail-01.jpg" alt="IMG">
+											</div>
+
+											<div class="row">
+												<div class="col-md-8">
+													<div class="content-event">
+														<h4>
+															EVENT DESCRIPTION
+														</h4>
+
+														<p>
+															Josh, one of our tutors here, a student at Amhrest College, will be taking the attendees through a comprehensive process discussing applying to college. 
+														</p>
+														<h4>
+															EVENT CONTENT
+														</h4>
+
+														<ul>
+															<li>
+																Standardised Tests during Covid-19
+															</li>
+															<li>
+																How colleges evaluate applicants
+															</li>
+														</p>
+													</div>
+												</div>
+
+												<div class="col-md-4">
+													<div class="info-event">
+														<div class="item-info">
+															<h6 class="name-info">
+																Date & Time:
+															</h6>
+
+															<ul class="value-info">
+																<li>
+																	<i class="ion ion-android-alarm-clock"></i>
+																	10 am Eastern Standard Time
+																</li>
+
+																<li>
+																	<i class="ion ion-android-calendar"></i>
+																	March 14, 2021 														</li>
+															</ul>
+														</div>
+
+														<div class="item-info">
+															<h6 class="name-info">
+																Venue:
+															</h6>
+
+															<ul class="value-info">
+																<li>
+																	<i class="ion ion-android-pin"></i>
+																	<a href="https://discord.gg/MeV93SR7h8">Discord Server</a>
+																</li>
+															</ul>
+														</div>
+
+														<div class="item-info">
+															<h6 class="name-info">
+																Contact details:
+															</h6>
+
+															<ul class="value-info">
+																<li>
+																	<i class="ion ion-android-mail"></i>
+																	<a href="mailto:twisttutors@gmail.comm">twisttutors@gmail.com</a>
+																</li>
+															</ul>
+														</div>
+
+														<div class="item-info share-link">
+															<h6 class="name-info">
+																Share:
+															</h6>
+
+															<span class="socials">
+																<a href="javascript:void(0)" class="item-social">
+																	<i class="ion ion-social-facebook"></i>
+																</a>
+
+																<a href="javascript:void(0)" class="item-social">
+																	<i class="ion ion-social-twitter"></i>
+																</a>
+
+																<a href="javascript:void(0)" class="item-social">
+																	<i class="ion ion-social-googleplus"></i>
+																</a>
+
+																<a href="javascript:void(0)" class="item-social">
+																	<i class="ion ion-social-vimeo"></i>
+																</a>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="author-event">
+											<div class="ava-author">
+												<img src="assets/images/avatar/ava-event-02.jpg" alt="IMG">
+											</div>
+
+											<div class="text-author">
+												<h6 class="name-author">
+													Josh, College Tutor 
+												</h6>
+
+												<div class="description-author">
+													Student at Amherst University, the No. 2 Liberal Arts College in the United States
+												</div>
+											</div>
+										</div>
+
+										<div class="form-join-event">
+											<h3 class="title-form">
+												Questions?
+											</h3>
+
+											<form action="javascript:void(0)">
+												<div class="row">
+													<div class="col-md-4">
+														<label>
+															<input type="text" placeholder="Name *" name="name">
+														</label>
+													</div>
+
+													<div class="col-md-4">
+														<label>
+															<input type="text" placeholder="Email *" name="email">
+														</label>
+													</div>
+
+													<div class="col-md-4">
+														<label>
+															<input type="text" placeholder="Phone " name="phone">
+														</label>
+													</div>
+												</div>
+
+												<label>
+													<textarea placeholder="Message *" name="Message"></textarea>
+												</label>
+
+												<button>
+													Ask us a question
+												</button>
+											</form>
+										</div>
+									</div>
+
+									<div class="col-lg-3 sticky-sidebar">
+										<div class="buy-ticket">
+											<h4 class="title">
+												Sign Up
+											</h4>
+											
+											<form action="javascript:void(0)">
+												<div class="info-ticket">
+													<div class="item-info">
+														<span class="name">
+															Total Slots 
+														</span>
+
+														<span class="value">
+															50
+														</span>
+													</div>
+
+													<div class="item-info">
+														<span class="name">
+															Booked Slots 
+														</span>
+
+														<span class="value">
+															0
+														</span>
+													</div>
+
+													<div class="item-info">
+														<span class="name">
+															Cost 
+														</span>
+
+														<span class="value special-value">
+															Free!
+														</span>
+													</div>
+
+													<div class="item-info">
+														<span class="name">
+															Quantity
+														</span>
+
+														<span class="value">
+															<input type="text" value="1">
+														</span>
+													</div>
+												</div>
+
+												<div class="buttons-ticket">
+													<button>
+														Register
+													</button>
+												</div>
+
+												<div class="notice-ticket">
+													You must login to our site to book this event!
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+	<!-- end Main content -->
+
+	<!-- Footer -->
+	<footer class="site-footer style-1" style="background-image: url(assets/images/home/bg-png-02.png);">
+		<div class="footer-top">
+			
+			<div class="container">
+				<div class="content-footer-top">
+					<p>
+						TwisTutors
+					</p>
+
+					<p>
+						<a href="mailto:twisttutors@gmail.com">
+							twisttutors@gmail.com
+						</a>
+					</p>
+				</div>
+
+				<div class="social-links">
+					<ul class="socials">
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-facebook"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-twitter"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-pinterest-p"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-linkedin"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- end Footer -->
+</div>
+
+<div id="back-to-top" class="btn-back-to-top"><i class="ion ion-ios-arrow-thin-up"></i></div>
+
+<!--===============================================================================================-->
+<script src="assets/libs/jquery/jquery-3.4.1.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/bootstrap/popper.js?v=1"></script>
+<script src="assets/libs/bootstrap/bootstrap.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/animsition/animsition.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/slick/slick.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/select2/select2.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/countdown/jquery.plugin.min.js?v=1"></script>
+<script src="assets/libs/countdown/jquery.countdown.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/isotope/isotope.pkgd.min.js?v=1"></script>
+<script src="assets/libs/isotope/modul.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/sticky-sidebar/theia-sticky-sidebar.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/js/main.js?v=1"></script>
+
+
+</body>
+</html>
