@@ -11,14 +11,16 @@ var firebaseConfig = {
 var sign = document.getElementById("signUp");
 sign.addEventListener("click", signUp);
 
+var signin = document.getElementById("signIn");
+signin.addEventListener("click", signIn);
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-    console.log("kill me")
     const auth = firebase.auth();
 
 
 function signUp() {
-    console.log("kill me again")
+    console.log("Signed up")
     var email = document.getElementById("email")
     var password = document.getElementById("password")
 
@@ -27,3 +29,19 @@ function signUp() {
 
         alert("Signed Up")
     }
+
+function signIn() {
+    console.log("Loging in")
+    var email = document.getElementById("email")
+    var password = document.getElementById("password")
+
+        const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+        promise.catch(e => alert(e.message))
+
+        alert("Signed In " + email )
+}
+
+function signOut() {
+    auth.signOut()
+    alert("Signed Out");
+}

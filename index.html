@@ -181,11 +181,15 @@
 
 													<form id="loginform">
 														<p class="login-username">
-															<input type="text" placeholder="Username"   class="input">
+															<input type="text" id="username" placeholder="Username"   class="input">
 														</p>
 
 														<p class="login-email">
-															<input type="email" name="user_email" placeholder="Email"   class="input">
+															<input type="email" id="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="login-password">
+															<input type="password" id="password" name="user_password" placeholder="Password"  class="input">
 														</p>
 
 														<p class="login-remember">
@@ -193,7 +197,7 @@
 														</p>
 
 														<p class="button-submit">
-															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Login"/>
+															<input type="submit" id="signIn" name="wp-submit" class="button button-primary button-large" value="Login"/>
 															<input type="hidden" name="redirect_to" value=""/>
 														</p>
 
