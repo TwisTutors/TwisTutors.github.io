@@ -1,3 +1,5 @@
+//R*kU^ry9!4#t
+
 var firebaseConfig = {
   apiKey: "AIzaSyChqnULJ8loLKhr1JhRkG5ki7XgtJSw2E8",
   authDomain: "login-eae5d.firebaseapp.com",
@@ -30,6 +32,11 @@ function signUp() {
         alert("Signed Up")
     }
 
+function updateuser() {
+    var event1 = document.getElementById('event1')
+    
+}
+
 function signIn() {
     console.log("Loging in")
     var email = document.getElementById("email")
@@ -45,3 +52,4 @@ function signOut() {
     auth.signOut()
     alert("Signed Out");
 }
+

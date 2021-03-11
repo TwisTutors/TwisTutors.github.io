@@ -1,0 +1,7 @@
+{
+    "name": "Twist",
+    "version": "1.0.0",
+    "dependencies": {
+        "firebase-admin": "^9.5.0"
+    }
+}
