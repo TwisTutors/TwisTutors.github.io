@@ -116,7 +116,6 @@
 								<div class="loginwrapper">
 									<!-- form register -->
 									<div class="login-popup box-register">
-										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
 
 										<div class="inner-login">
 											<h3 class="title">
@@ -134,11 +133,15 @@
 
 													<form id="registerform">
 														<p class="login-username">
-															<input type="text" placeholder="Username"   class="input">
+															<input type="username" placeholder="Username"   class="input">
 														</p>
 
 														<p class="login-email">
 															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="login-password">
+															<input type="password" name="user_password" placeholder="Password"  class="input">
 														</p>
 
 														<p class="text-mail">
@@ -146,7 +149,7 @@
 														</p>
 
 														<p class="button-submit">
-															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Register"/>
+															<input type="submit" onclick="signUp()" id="signUp" name="wp-submit" class="button button-primary button-large" value="Register"/>
 															<input type="hidden" name="redirect_to" value=""/>
 														</p>
 													</form>
@@ -158,8 +161,6 @@
 
 									<!-- form login -->
 									<div class="login-popup box-login">
-										<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
-
 										<div class="inner-login">
 											<h3 class="title">
 														<span>
