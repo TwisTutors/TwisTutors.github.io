@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TwisTutors-Events</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="https://i.imgur.com/264tAgT.png"/>
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/ionicons/css/ionicons.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/libs/slick/slick.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/magnific-popup/magnific-popup.css?v=1">
+	<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/libs/animsition/animsition.min.css?v=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1">
+	<!--===============================================================================================-->
+
+</head>
+<body class="animsition">
+
+<div id="wrapper-container">
+
+	<!-- Header -->
+	<header class="site-header sticky-header layout-1">
+		<div class="header-inner element-to-stick">
+			<div class="container">
+				<div class="wrap-content-header">
+					<div class="header-logo">
+						<a href="index.html" class="logo">
+							TwisTutors
+						</a>
+					</div>
+
+					<nav class="main-navigation">
+						<ul class="menu-lists">
+							<li class="menu-item-has-children">
+								<a href="index.html">
+									Home
+								</a>
+							</li>
+	<!--				
+							<li class="menu-item-has-children">
+								<a href="shop.html">
+									Shop
+								</a>
+								<ul class="sub-menu">
+									<li>
+										<a href="about.html">
+											Books
+										</a>
+									</li>
+								</ul>
+								-->	
+							<li>
+								<a href="about.html">
+									About
+								</a>
+							</li>
+							<li>
+								<a href="faq.html">
+									FAQs
+								</a>
+							</li>
+							<li>
+								<a href="events.html">
+									Events
+								</a>
+							</li>
+<!--
+							<li >
+								<a href="blog.html">
+									Blog
+								</a>
+							
+							</li>
+-->
+<li>
+								<a href="contact.html">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="menu-right">
+						<div class="element-search layout-1">
+							<div class="search-button"></div>
+
+							<div class="search-form">
+								<span class="close-form"></span>
+
+								<form role="search" method="get" class="form-search" >
+									<input type="text" class="search-field" name="s"/>
+									<span class="search-notice"> Hit enter to search or ESC to close</span>
+								</form>
+
+								<ul class="list-search list-unstyled">
+								</ul>
+							</div>
+						</div>
+
+						<!-- shortcode login popup -->
+						<div class="element-login-popup layout-1">
+							<div class="login-links">
+								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a>
+							</div>
+
+							<div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide">
+								<div class="loginwrapper">
+									<!-- form register -->
+									<div class="login-popup box-register">
+
+										<div class="inner-login">
+											<h3 class="title">
+												<span class="current-title">Register</span>
+												<span>
+															<a href="#login" class="display-box" data-display=".box-login">Login</a>
+														</span>
+											</h3>
+
+											<div class="form-row">
+												<div class="wrap-form">
+													<div class="form-desc">
+														We will need...
+													</div>
+
+													<form id="registerform">
+														<p class="login-username">
+															<input type="username" placeholder="Username"   class="input">
+														</p>
+
+														<p class="login-email">
+															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="login-password">
+															<input type="password" name="user_password" placeholder="Password"  class="input">
+														</p>
+
+														<p class="text-mail">
+															We send your registration email to this address.
+														</p>
+
+														<p class="button-submit">
+															<input type="submit" onclick="signUp()" id="signUp" name="wp-submit" class="button button-primary button-large" value="Register"/>
+															<input type="hidden" name="redirect_to" value=""/>
+														</p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end form register -->
+
+									<!-- form login -->
+									<div class="login-popup box-login">
+										<div class="inner-login">
+											<h3 class="title">
+														<span>
+															<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+														</span>
+
+												<span class="current-title">Login</span>
+											</h3>
+
+											<div class="form-row">
+												<div class="wrap-form">
+													<div class="form-desc"> We will need... </div>
+
+													<form id="loginform">
+														<p class="login-username">
+															<input type="text" placeholder="Username"   class="input">
+														</p>
+
+														<p class="login-email">
+															<input type="email" name="user_email" placeholder="Email"   class="input">
+														</p>
+
+														<p class="login-remember">
+															<input type="checkbox" name="rememberme" id="rememberme" value="forever">  Remember Me
+														</p>
+
+														<p class="button-submit">
+															<input type="submit" name="wp-submit" class="button button-primary button-large" value="Login"/>
+															<input type="hidden" name="redirect_to" value=""/>
+														</p>
+
+														<p class="link-bottom"><a href="#losspw" class="display-box"
+																				  data-display=".box-lostpass"></a>
+														</p>
+													</form>
+
+													<p class="link-bottom"><a href="#losspw" class="display-box"
+																			  data-display=".box-lostpass">Lost your password? </a>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end form login -->
+
+									<!-- form lost passwords -->
+									<div class="login-popup box-lostpass">
+										<div class="login-popup box-lostpass">
+											<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
+
+											<div class="inner-login">
+												<h3 class="title">
+															<span>
+																<a href="#register" class="display-box" data-display=".box-register">Registration</a>
+															</span>
+
+													<span class="current-title"> Reset Password</span>
+												</h3>
+
+												<div class="form-row">
+													<form name="lostpasswordform" id="lostpasswordform" method="post">
+														<p class="description"> Please enter your username or email address. You will receive a link to create a new password via email.
+														</p>
+
+														<p class="login-username">
+															<input placeholder="Username or email" type="text" name="user_login_lostpass" id="user_login_lostpass" class="input"/>
+														</p>
+
+														<p>
+															<input type="submit" name="wp-submit-lostpass" id="wp-submit-lostpass" class="button button-primary button-large" value="Reset password"/>
+														</p>
+
+														<p class="link-bottom"> Are you a member?
+															<a href="#login" class="display-box" data-display=".box-login"> Sign in now </a>
+														</p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- end lost passwords -->
+								</div>
+							</div>
+						</div>
+						<!-- end shortcode login -->
+						<!-- Button toggle menu-mobile -->
+						<div class="menu-mobile-effect navbar-toggle">
+							<div class="icon-wrap">
+								<i class="ion-navicon"></i>
+							</div>
+						</div>
+						<!-- end Button toggle menu-mobile -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="mobile-menu-container mobile-effect">
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="index.html">
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="about.html">
+					About
+				</a>
+			</li>
+
+			<li>
+				<a href="faq.html">
+					FAQs
+				</a>
+			</li>
+
+			<li>
+				<a href="events.html">
+					Events
+				</a>
+			</li>
+
+			<li>
+				<a href="contact.html">
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- end Header -->
+	
+	<!-- Main content -->
+	<div id="main-content">
+		<div class="content-area">
+			<div class="page-title">
+					<span class="overlay-top-header"></span>
+
+					<div class="content container"> 
+						<h1>
+							My Events
+						</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="site-content">
+				<main class="site-main">
+					<div class="wrap-main-content">
+						<div class="container">
+							<div class="bl-event-list">
+								<div class="feature-event">
+									<div class="image-event">
+										<div class="slide-image js-call-slick-col" data-numofshow="1" data-numofscroll="1" data-loopslide="1" data-autoscroll="0" data-speedauto="6000" data-responsive="[1, 1], [1, 1], [1, 1], [1, 1], [1, 1]" data-middlearrow=".item-slick > a > img">
+											<div class="wrap-arrow-slick">
+												<div class="arow-slick prev-slick">
+													<i class="ion ion-ios-arrow-left"></i>
+												</div>
+
+												<div class="arow-slick next-slick">
+													<i class="ion ion-ios-arrow-right"></i>
+												</div>
+											</div>
+
+											<div class="slide-slick">
+												<div class="item-slick">
+													<a href="college101.html"><img src="assets/images/events/event-01.jpg" alt="IMG"></a>
+
+													<div class="text-event">
+														<div class="tp_event_counter" data-time="March 14, 2021 10:00:00 -5:00">
+															<div class="countdown-row">
+																<div class="countdown-section">
+																	<div class="background"></div>
+																	<span class="countdown-amount">12</span> 
+
+																	<span class="countdown-period">
+																		Days
+																	</span>
+																</div>
+
+																<div class="countdown-section">
+																	<span class="countdown-amount">35</span> 
+
+																	<span class="countdown-period">
+																		Hours
+																	</span>
+																</div>
+
+																<div class="countdown-section">
+																	<span class="countdown-amount">40</span> 
+
+																	<span class="countdown-period">
+																		Minutes
+																	</span>
+																</div>
+
+																<div class="countdown-section">
+																	<span class="countdown-amount">00</span> 
+
+																	<span class="countdown-period">
+																		Seconds 
+																	</span>
+																</div>
+															</div>
+														</div>
+
+														<h3 class="title-event">
+													<a href="single-events.html">
+																College 101, a webinar
+															</a>
+														</h3>
+
+														<div class="info-event">
+															<span>
+																<i class="ion ion-android-alarm-clock"></i>
+																10 am - 11 am                                 
+															</span>
+
+															<span>
+																<i class="ion ion-android-calendar"></i>
+																March 13, 2021												
+															</span>
+
+															<span>
+																<i class="ion ion-android-pin"></i>
+																<a href="https://discord.gg/MeV93SR7h8">Discord Server</a>                                 
+															</span>
+														</div>
+													</div>
+												</div>
+												<br>
+												<div class="text-event">
+													<div class="tp_event_counter" data-time="March 15, 2021 12:00:00 -5:00">
+														<div class="countdown-row">
+															<div class="countdown-section">
+																<div class="background"></div>
+																<span class="countdown-amount">12</span> 
+
+																<span class="countdown-period">
+																	Days
+																</span>
+															</div>
+
+															<div class="countdown-section">
+																<span class="countdown-amount">35</span> 
+
+																<span class="countdown-period">
+																	Hours
+																</span>
+															</div>
+
+															<div class="countdown-section">
+																<span class="countdown-amount">40</span> 
+
+																<span class="countdown-period">
+																	Minutes
+																</span>
+															</div>
+
+															<div class="countdown-section">
+																<span class="countdown-amount">00</span> 
+
+																<span class="countdown-period">
+																	Seconds 
+																</span>
+															</div>
+														</div>
+													</div>
+
+													<h3 class="title-event">
+												<a href="intro-to-discord.html">
+															A guide to Discord
+														</a>
+													</h3>
+
+													<div class="info-event">
+														<span>
+															<i class="ion ion-android-alarm-clock"></i>
+															10 am - 11 am                                 
+														</span>
+
+														<span>
+															<i class="ion ion-android-calendar"></i>
+															March 13, 2021												
+														</span>
+
+														<span>
+															<i class="ion ion-android-pin"></i>
+															Discord Server                                 
+														</span>
+													</div>
+												</div>
+											</div>
+
+
+												<div class="item-slick">
+													<a href="single-events.html"><img src="assets/images/events/event-02.jpg" alt="IMG"></a>
+
+													<div class="text-event">
+														<div class="tp_event_counter" data-time="March 15, 2021 12:00:00 -5:00">
+															<div class="countdown-row">
+																<div class="countdown-section">
+																	<div class="background"></div>
+																	<span class="countdown-amount">12</span> 
+
+																	<span class="countdown-period">
+																		Days
+																	</span>
+																</div>
+
+																<div class="countdown-section">
+																	<span class="countdown-amount">35</span> 
+
+																	<span class="countdown-period">
+																		Hours
+																	</span>
+																</div>
+
+																<div class="countdown-section">
+																	<span class="countdown-amount">40</span> 
+
+																	<span class="countdown-period">
+																		Minutes
+																	</span>
+																</div>
+
+																<div class="countdown-section">
+																	<span class="countdown-amount">00</span> 
+
+																	<span class="countdown-period">
+																		Seconds 
+																	</span>
+																</div>
+															</div>
+														</div>
+
+														<h3 class="title-event">
+													<a href="single-events.html">
+														A guide to Discord
+															</a>
+														</h3>
+
+														<div class="info-event">
+															<span>
+																<i class="ion ion-android-alarm-clock"></i>
+																Live at 12 PM EST!                                
+															</span>
+
+															<span>
+																<i class="ion ion-android-calendar"></i>
+																March 15, 2021												
+															</span>
+
+															<span>
+																<i class="ion ion-android-pin"></i>
+																Youtube Channel                                 
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content container"> 
+									<h1>
+										All Upcoming Events
+									</h1>
+								</div>
+								<br>
+								<div class="bl-event-list">
+									<div class="feature-event">
+										<div class="image-event">
+											<div class="slide-image js-call-slick-col" data-numofshow="1" data-numofscroll="1" data-loopslide="1" data-autoscroll="0" data-speedauto="6000" data-responsive="[1, 1], [1, 1], [1, 1], [1, 1], [1, 1]" data-middlearrow=".item-slick > a > img">
+												<div class="wrap-arrow-slick">
+													<div class="arow-slick prev-slick">
+														<i class="ion ion-ios-arrow-left"></i>
+													</div>
+	
+													<div class="arow-slick next-slick">
+														<i class="ion ion-ios-arrow-right"></i>
+													</div>
+												</div>
+	
+												<div class="slide-slick">
+													<div class="item-slick">
+														<a href="college101.html"><img src="assets/images/events/event-01.jpg" alt="IMG"></a>
+	
+														<div class="text-event">
+															<div class="tp_event_counter" data-time="March 14, 2021 10:00:00 -5:00">
+																<div class="countdown-row">
+																	<div class="countdown-section">
+																		<div class="background"></div>
+																		<span class="countdown-amount">12</span> 
+	
+																		<span class="countdown-period">
+																			Days
+																		</span>
+																	</div>
+	
+																	<div class="countdown-section">
+																		<span class="countdown-amount">35</span> 
+	
+																		<span class="countdown-period">
+																			Hours
+																		</span>
+																	</div>
+	
+																	<div class="countdown-section">
+																		<span class="countdown-amount">40</span> 
+	
+																		<span class="countdown-period">
+																			Minutes
+																		</span>
+																	</div>
+	
+																	<div class="countdown-section">
+																		<span class="countdown-amount">00</span> 
+	
+																		<span class="countdown-period">
+																			Seconds 
+																		</span>
+																	</div>
+																</div>
+															</div>
+	
+															<h3 class="title-event">
+														<a href="single-events.html">
+																	College 101, a webinar
+																</a>
+															</h3>
+	
+															<div class="info-event">
+																<span>
+																	<i class="ion ion-android-alarm-clock"></i>
+																	10 am - 11 am                                 
+																</span>
+	
+																<span>
+																	<i class="ion ion-android-calendar"></i>
+																	March 13, 2021												
+																</span>
+	
+																<span>
+																	<i class="ion ion-android-pin"></i>
+																	<a href="https://discord.gg/MeV93SR7h8">Discord Server</a>                                 
+																</span>
+															</div>
+														</div>
+													</div>
+													<br>
+													<div class="text-event">
+														<div class="tp_event_counter" data-time="March 15, 2021 12:00:00 -5:00">
+															<div class="countdown-row">
+																<div class="countdown-section">
+																	<div class="background"></div>
+																	<span class="countdown-amount">12</span> 
+	
+																	<span class="countdown-period">
+																		Days
+																	</span>
+																</div>
+	
+																<div class="countdown-section">
+																	<span class="countdown-amount">35</span> 
+	
+																	<span class="countdown-period">
+																		Hours
+																	</span>
+																</div>
+	
+																<div class="countdown-section">
+																	<span class="countdown-amount">40</span> 
+	
+																	<span class="countdown-period">
+																		Minutes
+																	</span>
+																</div>
+	
+																<div class="countdown-section">
+																	<span class="countdown-amount">00</span> 
+	
+																	<span class="countdown-period">
+																		Seconds 
+																	</span>
+																</div>
+															</div>
+														</div>
+	
+														<h3 class="title-event">
+													<a href="intro-to-discord.html">
+																A guide to Discord
+															</a>
+														</h3>
+	
+														<div class="info-event">
+															<span>
+																<i class="ion ion-android-alarm-clock"></i>
+																10 am - 11 am                                 
+															</span>
+	
+															<span>
+																<i class="ion ion-android-calendar"></i>
+																March 13, 2021												
+															</span>
+	
+															<span>
+																<i class="ion ion-android-pin"></i>
+																Discord Server                                 
+															</span>
+														</div>
+													</div>
+												</div>
+	
+	
+													<div class="item-slick">
+														<a href="single-events.html"><img src="assets/images/events/event-02.jpg" alt="IMG"></a>
+	
+														<div class="text-event">
+															<div class="tp_event_counter" data-time="March 15, 2021 12:00:00 -5:00">
+																<div class="countdown-row">
+																	<div class="countdown-section">
+																		<div class="background"></div>
+																		<span class="countdown-amount">12</span> 
+	
+																		<span class="countdown-period">
+																			Days
+																		</span>
+																	</div>
+	
+																	<div class="countdown-section">
+																		<span class="countdown-amount">35</span> 
+	
+																		<span class="countdown-period">
+																			Hours
+																		</span>
+																	</div>
+	
+																	<div class="countdown-section">
+																		<span class="countdown-amount">40</span> 
+	
+																		<span class="countdown-period">
+																			Minutes
+																		</span>
+																	</div>
+	
+																	<div class="countdown-section">
+																		<span class="countdown-amount">00</span> 
+	
+																		<span class="countdown-period">
+																			Seconds 
+																		</span>
+																	</div>
+																</div>
+															</div>
+	
+															<h3 class="title-event">
+														<a href="single-events.html">
+															A guide to Discord
+																</a>
+															</h3>
+	
+															<div class="info-event">
+																<span>
+																	<i class="ion ion-android-alarm-clock"></i>
+																	Live at 12 PM EST!                                
+																</span>
+	
+																<span>
+																	<i class="ion ion-android-calendar"></i>
+																	March 15, 2021												
+																</span>
+	
+																<span>
+																	<i class="ion ion-android-pin"></i>
+																	Youtube Channel                                 
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+				
+<!--
+								<div class="row">
+									<div class="col-md-6 col-lg-4">
+										<div class="item-event">
+											<div class="image-event">
+												<a href="single-events.html">
+													<img src="assets/images/events/event-07.jpg" alt="IMG">
+												</a>
+												<div class="date-event">
+													<span class="number-date">14</span> OCT
+												</div>
+											</div>
+
+											<div class="text-event">
+												<h3 class="title-event">
+													<a href="single-events.html">
+														Cooking Workshop & Language
+													</a>
+												</h3>
+
+												<ul class="info-event">
+													<li>
+														<i class="ion ion-android-alarm-clock"></i>
+														7:30 AM - 6:00 PM                  
+													</li>
+
+													<li>
+														<i class="ion ion-ios-location-outline"></i>
+														125 Birmingham City, UK                  
+													</li>
+												</ul>
+
+												<div class="author-event">
+													<a href="javascript:void(0)" class="ava-author">
+														<img src="assets/images/avatar/ava-event-01.jpg" alt="IMG">
+													</a>
+
+													<div class="text-author">
+														<span class="name-author">
+															By <a href="javascript:void(0)">Linda</a>
+														</span>
+
+														<span class="info-author">
+															General Developer
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-6 col-lg-4">
+										<div class="item-event">
+											<div class="image-event">
+												<a href="single-events.html">
+													<img src="assets/images/events/event-08.jpg" alt="IMG">
+												</a>
+
+												<div class="date-event">
+													<span class="number-date">14</span> OCT
+												</div>
+											</div>
+
+											<div class="text-event">
+												<h3 class="title-event">
+													<a href="single-events.html">
+														Cooking Workshop & Language
+													</a>
+												</h3>
+
+												<ul class="info-event">
+													<li>
+														<i class="ion ion-android-alarm-clock"></i>
+														7:30 AM - 6:00 PM                  
+													</li>
+
+													<li>
+														<i class="ion ion-ios-location-outline"></i>
+														125 Birmingham City, UK                  
+													</li>
+												</ul>
+
+												<div class="author-event">
+													<a href="javascript:void(0)" class="ava-author">
+														<img src="assets/images/avatar/ava-event-01.jpg" alt="IMG">
+													</a>
+
+													<div class="text-author">
+														<span class="name-author">
+															By <a href="javascript:void(0)">Linda</a>
+														</span>
+
+														<span class="info-author">
+															General Developer
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-6 col-lg-4">
+										<div class="item-event">
+											<div class="image-event">
+												<a href="single-events.html">
+													<img src="assets/images/events/event-09.jpg" alt="IMG">
+												</a>
+
+												<div class="date-event">
+													<span class="number-date">14</span> OCT
+												</div>
+											</div>
+
+											<div class="text-event">
+												<h3 class="title-event">
+													<a href="single-events.html">
+														Cooking Workshop & Language
+													</a>
+												</h3>
+
+												<ul class="info-event">
+													<li>
+														<i class="ion ion-android-alarm-clock"></i>
+														7:30 AM - 6:00 PM                  
+													</li>
+
+													<li>
+														<i class="ion ion-ios-location-outline"></i>
+														125 Birmingham City, UK                  
+													</li>
+												</ul>
+
+												<div class="author-event">
+													<a href="javascript:void(0)" class="ava-author">
+														<img src="assets/images/avatar/ava-event-01.jpg" alt="IMG">
+													</a>
+
+													<div class="text-author">
+														<span class="name-author">
+															By <a href="javascript:void(0)">Linda</a>
+														</span>
+
+														<span class="info-author">
+															General Developer
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-6 col-lg-4">
+										<div class="item-event">
+											<div class="image-event">
+												<a href="single-events.html">
+													<img src="assets/images/events/event-10.jpg" alt="IMG">
+												</a>
+
+												<div class="date-event">
+													<span class="number-date">14</span> OCT
+												</div>
+											</div>
+
+											<div class="text-event">
+												<h3 class="title-event">
+													<a href="single-events.html">
+														Cooking Workshop & Language
+													</a>
+												</h3>
+
+												<ul class="info-event">
+													<li>
+														<i class="ion ion-android-alarm-clock"></i>
+														7:30 AM - 6:00 PM                  
+													</li>
+
+													<li>
+														<i class="ion ion-ios-location-outline"></i>
+														125 Birmingham City, UK                  
+													</li>
+												</ul>
+
+												<div class="author-event">
+													<a href="javascript:void(0)" class="ava-author">
+														<img src="assets/images/avatar/ava-event-01.jpg" alt="IMG">
+													</a>
+
+													<div class="text-author">
+														<span class="name-author">
+															By <a href="javascript:void(0)">Linda</a>
+														</span>
+
+														<span class="info-author">
+															General Developer
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-6 col-lg-4">
+										<div class="item-event">
+											<div class="image-event">
+												<a href="single-events.html">
+													<img src="assets/images/events/event-11.jpg" alt="IMG">
+												</a>
+
+												<div class="date-event">
+													<span class="number-date">14</span> OCT
+												</div>
+											</div>
+
+											<div class="text-event">
+												<h3 class="title-event">
+													<a href="single-events.html">
+														Cooking Workshop & Language
+													</a>
+												</h3>
+
+												<ul class="info-event">
+													<li>
+														<i class="ion ion-android-alarm-clock"></i>
+														7:30 AM - 6:00 PM                  
+													</li>
+
+													<li>
+														<i class="ion ion-ios-location-outline"></i>
+														125 Birmingham City, UK                  
+													</li>
+												</ul>
+
+												<div class="author-event">
+													<a href="javascript:void(0)" class="ava-author">
+														<img src="assets/images/avatar/ava-event-01.jpg" alt="IMG">
+													</a>
+
+													<div class="text-author">
+														<span class="name-author">
+															By <a href="javascript:void(0)">Linda</a>
+														</span>
+
+														<span class="info-author">
+															General Developer
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-6 col-lg-4">
+										<div class="item-event">
+											<div class="image-event">
+												<a href="single-events.html">
+													<img src="assets/images/events/event-12.jpg" alt="IMG">
+												</a>
+
+												<div class="date-event">
+													<span class="number-date">14</span> OCT
+												</div>
+											</div>
+
+											<div class="text-event">
+												<h3 class="title-event">
+													<a href="single-events.html">
+														Cooking Workshop & Language
+													</a>
+												</h3>
+
+												<ul class="info-event">
+													<li>
+														<i class="ion ion-android-alarm-clock"></i>
+														7:30 AM - 6:00 PM                  
+													</li>
+
+													<li>
+														<i class="ion ion-ios-location-outline"></i>
+														125 Birmingham City, UK                  
+													</li>
+												</ul>
+
+												<div class="author-event">
+													<a href="javascript:void(0)" class="ava-author">
+														<img src="assets/images/avatar/ava-event-01.jpg" alt="IMG">
+													</a>
+
+													<div class="text-author">
+														<span class="name-author">
+															By <a href="javascript:void(0)">Linda</a>
+														</span>
+
+														<span class="info-author">
+															General Developer
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							-->
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+	<!--end Main content -->
+
+	<!-- Footer -->
+	<footer class="site-footer style-1" style="background-image: url(assets/images/home/bg-png-02.png);">
+		<div class="footer-top">
+			
+			<div class="container">
+				<div class="content-footer-top">
+					<p>
+						TwisTutors
+					</p>
+
+					<p>
+						<a href="mailto:twisttutors@gmail.com">
+							twisttutors@gmail.com
+						</a>
+					</p>
+				</div>
+
+				<div class="social-links">
+					<ul class="socials">
+						<li>
+							<a href="https://twitter.com/TwistTutors">
+								<i class="social-icon fa fa-twitter">
+								</i>
+							</a>
+						</li>
+
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<i class="social-icon fa fa-linkedin"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.instagram.com/Twist_Tutors/">
+								<i class="social-icon fa fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- end Footer -->
+</div>
+
+<div id="back-to-top" class="btn-back-to-top"><i class="ion ion-ios-arrow-thin-up"></i></div>
+
+<!--===============================================================================================-->
+<script src="assets/libs/jquery/jquery-3.4.1.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/bootstrap/popper.js?v=1"></script>
+<script src="assets/libs/bootstrap/bootstrap.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/animsition/animsition.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/slick/slick.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/select2/select2.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/countdown/jquery.plugin.min.js?v=1"></script>
+<script src="assets/libs/countdown/jquery.countdown.min.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/libs/isotope/isotope.pkgd.min.js?v=1"></script>
+<script src="assets/libs/isotope/modul.js?v=1"></script>
+<!--===============================================================================================-->
+<script src="assets/js/main.js?v=1"></script>
+
+
+</body>
+</html>
