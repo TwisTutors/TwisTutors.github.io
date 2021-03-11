@@ -1,14 +1,11 @@
-
-require('dotenv').config();
-
 var firebaseConfig = {
-  apiKey: process.env.APIKEY,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
-  measurementId: process.env.measurementId
+  apiKey: "AIzaSyChqnULJ8loLKhr1JhRkG5ki7XgtJSw2E8",
+  authDomain: "login-eae5d.firebaseapp.com",
+  projectId: "login-eae5d",
+  storageBucket: "login-eae5d.appspot.com",
+  messagingSenderId: "1071616747025",
+  appId: "1:1071616747025:web:86826a2e8c7d8a52e3b3b0",
+  measurementId: "G-6LM9QYBXY6"
 };
 
 var sign = document.getElementById("signUp");
