@@ -10,15 +10,35 @@ var firebaseConfig = {
   measurementId: "G-6LM9QYBXY6"
 };
 
+
+
 var sign = document.getElementById("signUp");
 sign.addEventListener("click", signUp);
 
 var signin = document.getElementById("signIn");
 signin.addEventListener("click", signIn);
 
+var update1 = document.getElementById("event1");
+update1.addEventListener("click", updateuser)
+
+var signout = document.getElementById("signOut");
+signout.addEventListener("click", signOut)
+
+
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+const auth = firebase.auth();
+console.log(auth)
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        console.log(firebase.auth().currentUser.uid);
+    }
+});
+
 
 
 function signUp() {
@@ -30,11 +50,20 @@ function signUp() {
         promise.catch(e => alert(e.message))
 
         alert("Signed Up")
+
     }
 
+
+
 function updateuser() {
-    var event1 = document.getElementById('event1')
-    
+
+    var event1 = "signed up";
+    var userRef = firebase.firestore().collection('users').doc(this.userId);
+
+    var setWithMerge = userRef.set({
+        email: email.value,
+        signedup: event1, 
+    }, {merge: true})
 }
 
 function signIn() {
@@ -45,8 +74,10 @@ function signIn() {
         const promise = auth.signInWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message))
 
-        alert("Signed In " + email )
-}
+        //alert("Signed In " + email )
+        
+
+    }
 
 function signOut() {
     auth.signOut()
