@@ -44,20 +44,8 @@
 								<a href="index.html">
 									Home
 								</a>
-							</li>
-	<!--				
-							<li class="menu-item-has-children">
-								<a href="shop.html">
-									Shop
-								</a>
-								<ul class="sub-menu">
-									<li>
-										<a href="about.html">
-											Books
-										</a>
-									</li>
-								</ul>
-								-->	
+							</li>			
+							
 							<li>
 								<a href="about.html">
 									About
@@ -73,16 +61,22 @@
 									Events
 								</a>
 							</li>
-
-							<li >
+							
+							<li>
 								<a href="contact.html">
 									Contact
 								</a>
-							
+								
 							</li>
-
-<li>
+							<li class="logged-in">
+								<button id="myEvents" name="myEvents">
+									My Events
+								</button>
+							</li>
+							
+							<li class="logged-in">
 								<button id="signOut" name="signOut">
+									
 									Signout
 								</button>
 							</li>
@@ -109,7 +103,7 @@
 						<!-- shortcode login popup -->
 						<div class="element-login-popup layout-1">
 							<div class="login-links">
-								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a>
+								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login" class="logged-out">Login</a>
 							</div>
 
 							<div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide">
@@ -193,13 +187,14 @@
 															<input type="submit" id="signIn" name="wp-submit" class="button button-primary button-large" value="Login"/>
 														</p>
 
-														<p class="link-bottom"><a href="#losspw" class="display-box"
+													<!--	<p class="link-bottom"><a href="#losspw" class="display-box"
 																				  data-display=".box-lostpass"></a>
 														</p>
 													</form>
 
 													<p class="link-bottom"><a href="#losspw" class="display-box"
 																			  data-display=".box-lostpass">Lost your password? </a>
+													-->
 													</p>
 												</div>
 											</div>
@@ -208,6 +203,7 @@
 									<!-- end form login -->
 
 									<!-- form lost passwords -->
+									<!--
 									<div class="login-popup box-lostpass">
 										<div class="login-popup box-lostpass">
 											<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
@@ -242,6 +238,7 @@
 											</div>
 										</div>
 									</div>
+								-->
 									<!-- end lost passwords -->
 								</div>
 							</div>

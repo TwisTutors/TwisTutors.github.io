@@ -649,41 +649,41 @@
             });
 
 
-            $('#bp-popup-login #loginform').submit(function (event) {
-                var elem = $('#bp-popup-login'),
-                    input_username = elem.find('#bp_login_name').val(),
-                    input_password = elem.find('#bp_login_pass').val();
+            // $('#bp-popup-login #loginform').submit(function (event) {
+            //     var elem = $('#bp-popup-login'),
+            //         input_username = elem.find('#bp_login_name').val(),
+            //         input_password = elem.find('#bp_login_pass').val();
 
-                if (input_username === '' || input_password === '') {
-                    return;
-                }
+            //     if (input_username === '' || input_password === '') {
+            //         return;
+            //     }
 
-                elem.addClass('loading');
-                elem.find('.message').slideDown().remove();
+            //     elem.addClass('loading');
+            //     elem.find('.message').slideDown().remove();
 
-                var data = {
-                    action: 'builderpress_login_ajax',
-                    username: input_username,
-                    password: input_password,
-                    remember: elem.find('#rememberme').val()
-                };
+            //     var data = {
+            //         action: 'builderpress_login_ajax',
+            //         username: input_username,
+            //         password: input_password,
+            //         remember: elem.find('#rememberme').val()
+            //     };
 
-                $.post(ajaxurl, data, function (res) {
-                    try {
-                        var response = JSON.parse(res);
-                        elem.find('.login-popup .inner-login').append(response.message);
-                        if (response.code === '1') {
-                            location.reload();
-                        }
-                        elem.removeClass('loading');
-                    } catch (e) {
-                        return false;
-                    }
-                });
+            //     $.post(ajaxurl, data, function (res) {
+            //         try {
+            //             var response = JSON.parse(res);
+            //             elem.find('.login-popup .inner-login').append(response.message);
+            //             if (response.code === '1') {
+            //                 location.reload();
+            //             }
+            //             elem.removeClass('loading');
+            //         } catch (e) {
+            //             return false;
+            //         }
+            //     });
 
-                event.preventDefault();
-                return false;
-            });
+            //     event.preventDefault();
+            //     return false;
+            // });
 
             // $(function ($) {
             //     $('#bp_login_name, #bp_login_name_ac').attr('placeholder', login_popup_js.login);

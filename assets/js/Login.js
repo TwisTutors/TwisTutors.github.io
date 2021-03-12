@@ -1,4 +1,17 @@
-//R*kU^ry9!4#t
+const loggedOutLinks = document.querySelectorAll('.logged-out')
+const loggedInLinks = document.querySelectorAll('.logged-in')
+
+const setupUI = (user) => {
+    if (user) {
+        loggedOutLinks.forEach(item => item.style.display = 'none')
+        loggedInLinks.forEach(item => item.style.display = 'block')
+
+    } else {
+        loggedOutLinks.forEach(item => item.style.display = 'block')
+        loggedInLinks.forEach(item => item.style.display = 'none')
+    }
+}
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyChqnULJ8loLKhr1JhRkG5ki7XgtJSw2E8",
@@ -15,8 +28,7 @@ var firebaseConfig = {
 var sign = document.getElementById("signUp");
 sign.addEventListener("click", signUp);
 
-var signin = document.getElementById("signIn");
-signin.addEventListener("click", signIn);
+
 
 var update1 = document.getElementById("event1");
 update1.addEventListener("click", updateuser)
@@ -36,6 +48,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
         console.log(firebase.auth().currentUser.uid);
+        setupUI(user)
+    } else {
+        setupUI()
     }
 });
 
@@ -71,9 +86,9 @@ function signIn() {
     var email = document.getElementById("email")
     var password = document.getElementById("password")
 
-        const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-        promise.catch(e => alert(e.message))
-
+    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+    promise.catch(e => alert(e.message))
+    alert("Signed Up")
         //alert("Signed In " + email )
         
 
