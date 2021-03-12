@@ -28,7 +28,8 @@ var firebaseConfig = {
 var sign = document.getElementById("signUp");
 sign.addEventListener("click", signUp);
 
-
+var signIn = document.getElementById("signIn");
+signIn.addEventListener("click", signIn)
 
 var update1 = document.getElementById("event1");
 update1.addEventListener("click", updateuser)
@@ -88,9 +89,8 @@ function signIn() {
 
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message))
-    alert("Signed Up")
-        //alert("Signed In " + email )
-        
+    alert("Signed In")
+
 
     }
 
