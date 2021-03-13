@@ -37,7 +37,7 @@
             this.thim_tabs();
             this.input_num_product();
             this.scroll_to();
-            this.counter();
+            //this.counter();
         },
 
         /**
@@ -83,14 +83,14 @@
         /**
          * counter
          */
-        counter: function() {
-            try {
-                $('.counter').counterUp({
-                    delay: 10,
-                    time: 1000
-                });
-            } catch(er) {console.log(er);}
-        },
+        // counter: function() {
+        //     try {
+        //         $('.counter').counterUp({
+        //             delay: 10,
+        //             time: 1000
+        //         });
+        //     } catch(er) {console.log(er);}
+        // },
 
 
         /**
@@ -265,36 +265,36 @@
 
             /*---------------------------------------------*/
             // Magic highlight
-            try {
-                var $headerMagicHighlight = $('.site-header.style-magic-highlight');
-                var $menuList = $headerMagicHighlight.find('.main-navigation .menu-lists');
-                var $menuCurrent = $menuList.children('.current_page_parent, .current-menu-item');
+            // try {
+            //     var $headerMagicHighlight = $('.site-header.style-magic-highlight');
+            //     var $menuList = $headerMagicHighlight.find('.main-navigation .menu-lists');
+            //     var $menuCurrent = $menuList.children('.current_page_parent, .current-menu-item');
 
-                $menuList.prepend('<span class="magic-highlight"></span>');
-                var left = $menuCurrent.offset().left - $menuList.offset().left + 3;
+            //     $menuList.prepend('<span class="magic-highlight"></span>');
+            //     var left = $menuCurrent.offset().left - $menuList.offset().left + 3;
 
-                $(window).on('resize', function() {
-                    $menuList.children('.magic-highlight').css('transition', 'none');
-                    left = $menuCurrent.offset().left - $menuList.offset().left + 3;
-                    $menuList.children('.magic-highlight').css('left', left + 'px');
-                })
+            //     $(window).on('resize', function() {
+            //         $menuList.children('.magic-highlight').css('transition', 'none');
+            //         left = $menuCurrent.offset().left - $menuList.offset().left + 3;
+            //         $menuList.children('.magic-highlight').css('left', left + 'px');
+            //     })
 
-                $menuList.children('.magic-highlight').css('left', left + 'px');
+            //     $menuList.children('.magic-highlight').css('left', left + 'px');
 
-                $menuList.children('li').each(function() {
-                    $(this).on('mouseover', function() {
-                        $menuList.children('.magic-highlight').css('transition', 'left .5s');
-                        var left = $(this).offset().left - $menuList.offset().left + 3;
-                        $menuList.children('.magic-highlight').css('left', left + 'px');
-                    })
+            //     $menuList.children('li').each(function() {
+            //         $(this).on('mouseover', function() {
+            //             $menuList.children('.magic-highlight').css('transition', 'left .5s');
+            //             var left = $(this).offset().left - $menuList.offset().left + 3;
+            //             $menuList.children('.magic-highlight').css('left', left + 'px');
+            //         })
 
-                    $(this).on('mouseout', function() {
-                        $menuList.children('.magic-highlight').css('transition', 'left .5s');
-                        var left = $menuCurrent.offset().left - $menuList.offset().left + 3;
-                        $menuList.children('.magic-highlight').css('left', left + 'px');
-                    })
-                })
-            } catch(er) {console.log(er);}
+            //         $(this).on('mouseout', function() {
+            //             $menuList.children('.magic-highlight').css('transition', 'left .5s');
+            //             var left = $menuCurrent.offset().left - $menuList.offset().left + 3;
+            //             $menuList.children('.magic-highlight').css('left', left + 'px');
+            //         })
+            //     })
+            // } catch(er) {console.log(er);}
 
         },
 
@@ -649,41 +649,41 @@
             });
 
 
-            $('#bp-popup-login #loginform').submit(function (event) {
-                var elem = $('#bp-popup-login'),
-                    input_username = elem.find('#bp_login_name').val(),
-                    input_password = elem.find('#bp_login_pass').val();
+            // $('#bp-popup-login #loginform').submit(function (event) {
+            //     var elem = $('#bp-popup-login'),
+            //         input_username = elem.find('#bp_login_name').val(),
+            //         input_password = elem.find('#bp_login_pass').val();
 
-                if (input_username === '' || input_password === '') {
-                    return;
-                }
+            //     if (input_username === '' || input_password === '') {
+            //         return;
+            //     }
 
-                elem.addClass('loading');
-                elem.find('.message').slideDown().remove();
+            //     elem.addClass('loading');
+            //     elem.find('.message').slideDown().remove();
 
-                var data = {
-                    action: 'builderpress_login_ajax',
-                    username: input_username,
-                    password: input_password,
-                    remember: elem.find('#rememberme').val()
-                };
+            //     var data = {
+            //         action: 'builderpress_login_ajax',
+            //         username: input_username,
+            //         password: input_password,
+            //         remember: elem.find('#rememberme').val()
+            //     };
 
-                $.post(ajaxurl, data, function (res) {
-                    try {
-                        var response = JSON.parse(res);
-                        elem.find('.login-popup .inner-login').append(response.message);
-                        if (response.code === '1') {
-                            location.reload();
-                        }
-                        elem.removeClass('loading');
-                    } catch (e) {
-                        return false;
-                    }
-                });
+            //     $.post(ajaxurl, data, function (res) {
+            //         try {
+            //             var response = JSON.parse(res);
+            //             elem.find('.login-popup .inner-login').append(response.message);
+            //             if (response.code === '1') {
+            //                 location.reload();
+            //             }
+            //             elem.removeClass('loading');
+            //         } catch (e) {
+            //             return false;
+            //         }
+            //     });
 
-                event.preventDefault();
-                return false;
-            });
+            //     event.preventDefault();
+            //     return false;
+            // });
 
             // $(function ($) {
             //     $('#bp_login_name, #bp_login_name_ac').attr('placeholder', login_popup_js.login);
