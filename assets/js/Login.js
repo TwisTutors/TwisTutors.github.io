@@ -24,21 +24,6 @@ var firebaseConfig = {
 };
 
 
-
-var sign = document.getElementById("signUp");
-sign.addEventListener("click", signUp);
-
-var signIn = document.getElementById("signIn");
-signIn.addEventListener("click", signIn)
-
-var update1 = document.getElementById("event1");
-update1.addEventListener("click", updateuser)
-
-var signout = document.getElementById("signOut");
-signout.addEventListener("click", signOut)
-
-
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
@@ -55,6 +40,17 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 });
 
+var sign = document.getElementById("signUp");
+sign.addEventListener("click", signUp);
+
+var signin = document.getElementById("signIn");
+signin.addEventListener("click", signIn)
+
+//var update1 = document.getElementById("event1");
+//update1.addEventListener("click", updateuser)
+
+var signout = document.getElementById("signOut");
+signout.addEventListener("click", signOut)
 
 
 function signUp() {
@@ -62,13 +58,26 @@ function signUp() {
     var email = document.getElementById("email")
     var password = document.getElementById("password")
 
-        const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-        promise.catch(e => alert(e.message))
-
-        alert("Signed Up")
+    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+    promise.catch(e => alert(e.message))
+    alert("Signed Up")
 
     }
 
+function signIn() {
+    console.log("Loging in")
+    var emaillogin = document.getElementById("emaillogin")
+    var passwordlogin = document.getElementById("passwordlogin")
+    console.log(emaillogin.value)
+    
+    auth.signInWithEmailAndPassword(emaillogin.value, passwordlogin.value).then(cred => {
+        console.log(cred.user)
+        alert("Signed In")
+    })
+    
+    
+    }
+    
 
 
 function updateuser() {
@@ -82,17 +91,6 @@ function updateuser() {
     }, {merge: true})
 }
 
-function signIn() {
-    console.log("Loging in")
-    var email = document.getElementById("email")
-    var password = document.getElementById("password")
-
-    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-    promise.catch(e => alert(e.message))
-    alert("Signed In")
-
-
-    }
 
 function signOut() {
     auth.signOut()
