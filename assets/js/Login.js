@@ -12,7 +12,6 @@ const setupUI = (user) => {
     }
 }
 
-
 var firebaseConfig = {
   apiKey: "AIzaSyChqnULJ8loLKhr1JhRkG5ki7XgtJSw2E8",
   authDomain: "login-eae5d.firebaseapp.com",
@@ -23,12 +22,10 @@ var firebaseConfig = {
   measurementId: "G-6LM9QYBXY6"
 };
 
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 console.log(auth)
-
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -52,7 +49,6 @@ signin.addEventListener("click", signIn)
 var signout = document.getElementById("signOut");
 signout.addEventListener("click", signOut)
 
-
 function signUp() {
     console.log("Signed up")
     var email = document.getElementById("email")
@@ -74,11 +70,12 @@ function signIn() {
         console.log(cred.user)
         alert("Signed In")
     })
-    
-    
-    }
-    
+}
 
+function signOut() {
+    auth.signOut()
+    alert("Signed Out");
+}
 
 function updateuser() {
 
@@ -91,9 +88,4 @@ function updateuser() {
     }, {merge: true})
 }
 
-
-function signOut() {
-    auth.signOut()
-    alert("Signed Out");
-}
 
