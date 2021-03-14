@@ -1,6 +1,5 @@
 const collegeevent = document.getElementById('ifcollegesignup')
 
-
 const setupUI = (user) => {
     const loggedOutLinks = document.querySelectorAll('.logged-out')
     const loggedInLinks = document.querySelectorAll('.logged-in')
@@ -52,7 +51,6 @@ firebase.auth().onAuthStateChanged(async function(user) {
         setupUI()
     }
 });
-
 
 try {
     var sign = document.getElementById("signUp");
