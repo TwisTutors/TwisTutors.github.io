@@ -1,9 +1,9 @@
-
+const collegeevent = document.getElementById('ifcollegesignup')
 
 
 const setupUI = (user) => {
-    const loggedOutLinks = document.querySelectorAll('#logged-out')
-    const loggedInLinks = document.querySelectorAll('#logged-in')
+    const loggedOutLinks = document.querySelectorAll('.logged-out')
+    const loggedInLinks = document.querySelectorAll('.logged-in')
     if (user) {
         loggedOutLinks.forEach(item => item.style.display = 'none')
         loggedInLinks.forEach(item => item.style.display = 'block')
@@ -30,7 +30,6 @@ const auth = firebase.auth();
 console.log(auth)
 
 firebase.auth().onAuthStateChanged(async function(user) {
-    const collegeevent = document.querySelectorAll('#ifcollegesignup')
     if (user) {
         console.log(firebase.auth().currentUser.uid);
         setupUI(user)
@@ -44,12 +43,12 @@ firebase.auth().onAuthStateChanged(async function(user) {
                 console.log(college)
                 if(college) {
                     console.log("leg")
-                    collegeevent.forEach(item => item.style.display = 'block')
+                    collegeevent.style.display = 'block'
                 }
             })
         })
     } else {
-        collegeevent.forEach(item => item.style.display = 'none')
+        collegeevent.style.display = 'none'
         setupUI()
     }
 });
