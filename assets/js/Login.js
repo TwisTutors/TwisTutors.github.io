@@ -1,7 +1,9 @@
-const loggedOutLinks = document.querySelectorAll('.logged-out')
-const loggedInLinks = document.querySelectorAll('.logged-in')
+
+
 
 const setupUI = (user) => {
+    const loggedOutLinks = document.querySelectorAll('#logged-out')
+    const loggedInLinks = document.querySelectorAll('#logged-in')
     if (user) {
         loggedOutLinks.forEach(item => item.style.display = 'none')
         loggedInLinks.forEach(item => item.style.display = 'block')
@@ -27,27 +29,61 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 console.log(auth)
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(async function(user) {
+    const collegeevent = document.querySelectorAll('#ifcollegesignup')
     if (user) {
-        // User is signed in.
         console.log(firebase.auth().currentUser.uid);
         setupUI(user)
+        console.log(emaillogin.value)
+        const collegeEvent = firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                console.log(doc.id, " => ", doc.data())
+                var data = doc.data();
+                var college = data.college;
+                Boolean(college)
+                console.log(college)
+                if(college) {
+                    console.log("leg")
+                    collegeevent.forEach(item => item.style.display = 'block')
+                }
+            })
+        })
     } else {
+        collegeevent.forEach(item => item.style.display = 'none')
         setupUI()
     }
 });
 
-var sign = document.getElementById("signUp");
-sign.addEventListener("click", signUp);
 
-var signin = document.getElementById("signIn");
-signin.addEventListener("click", signIn)
+try {
+    var sign = document.getElementById("signUp");
+    sign.addEventListener("click", signUp);
+}
+catch(err){}
 
-//var update1 = document.getElementById("event1");
-//update1.addEventListener("click", updateuser)
+try {
+    var signin = document.getElementById("signIn");
+    signin.addEventListener("click", signIn)
+}
+catch(err){}
 
-var signout = document.getElementById("signOut");
-signout.addEventListener("click", signOut)
+try {
+    var update1 = document.getElementById("college");
+    update1.addEventListener("click", college)
+}
+catch(err){}
+
+try {
+    var update1 = document.getElementById("IntroToDiscord");
+    update1.addEventListener("click", IntroToDiscord)
+}
+catch(err){}
+
+try {
+    var signout = document.getElementById("signOut");
+    signout.addEventListener("click", signOut)
+}
+catch(err){}
 
 function signUp() {
     console.log("Signed up")
@@ -57,6 +93,8 @@ function signUp() {
     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message))
     alert("Signed Up")
+    auth.signOut()
+    alert("Please Sign In now")
 
     }
 
@@ -77,15 +115,25 @@ function signOut() {
     alert("Signed Out");
 }
 
-function updateuser() {
 
-    var event1 = "signed up";
-    var userRef = firebase.firestore().collection('users').doc(this.userId);
+function college() {
+
+    var college = true;
+    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
 
     var setWithMerge = userRef.set({
         email: email.value,
-        signedup: event1, 
+        college: college, 
     }, {merge: true})
 }
 
+function IntroToDiscord() {
 
+    var discord = true;
+    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+
+    var setWithMerge = userRef.set({
+        email: emaillogin.value,
+        discord: discord, 
+    }, {merge: true})
+}

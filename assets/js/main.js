@@ -23,7 +23,7 @@
             this.header_menu();
             this.header_menu_mobile();
             this.login_popup();
-            this.login_error();
+            //this.login_error();
             this.slide_slick_col();
             this.search_open();
             this.sticky_sidebar();
