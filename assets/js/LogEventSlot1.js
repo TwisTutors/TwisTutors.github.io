@@ -1,4 +1,6 @@
-
+const collegeevent = document.getElementById('ifcollegesignup')
+const discordevent = document.getElementById('ifdiscordsignup')
+console.log(discordevent)
 
 const setupUI = (user) => {
     const loggedOutLinks = document.querySelectorAll('.logged-out')
@@ -32,8 +34,36 @@ firebase.auth().onAuthStateChanged(async function(user) {
     if (user) {
         console.log(firebase.auth().currentUser.uid);
         setupUI(user)
+        try {
+            const collegeEvent = firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    console.log(doc.id, " => ", doc.data())
+                    var data = doc.data();
+                    var college = data.college;
+                    Boolean(college)
+                    if(college) {
+                        collegeevent.style.display = 'block'
+                    }
+                })
+            })
+            const discordEvent = firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    console.log(doc.id, " => ", doc.data())
+                    var data = doc.data();
+                    var discord = data.discord;
+                    Boolean(discord)
+                    if(discord) {
+                        discordevent.style.display = 'block'
+                    }
+                })
+            })
+        }catch(err){}
         
     } else {
+        try{
+            collegeevent.style.display = 'none'
+            discordevent.style.display = 'none'
+        }catch(err){}
         setupUI()
     }
 });
