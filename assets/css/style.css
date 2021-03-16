@@ -2306,7 +2306,12 @@ body {
         flex-basis: 100%;
     }
 }
-
+.cancel-text {
+    color:#000
+}
+.cancel-text :hover {
+    color: blue
+}
 .subscribe-form-02 {
     width: 832px;
     max-width: 100%;
@@ -3394,7 +3399,7 @@ body {
     color: #e9011f;
 }
 
-.bl-event-list .feature-event .text-event .info-event {
+.bl-event-list .feature-event .text-event .info-event .href-stuff {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.75;
@@ -3403,7 +3408,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+.info-event :hover {
+    color: brown
+}
 .bl-event-list .feature-event .text-event .info-event span {
     margin: 0 15px;
 }
@@ -14900,7 +14907,9 @@ body {
     font-size: 24px;
     text-align: center;
 }
+.join-button {
 
+}
 .wp-social-login-widget {
     margin-bottom: -15px;
 }
