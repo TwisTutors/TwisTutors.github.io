@@ -34,15 +34,20 @@ firebase.auth().onAuthStateChanged(async function(user) {
     if (user) {
         console.log(firebase.auth().currentUser.uid);
         setupUI(user)
-        try {
-            const collegeEvent = firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
+        //try {
+            firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     console.log(doc.id, " => ", doc.data())
                     var data = doc.data();
                     var college = data.college;
                     Boolean(college)
+                    console.log(college)
                     if(college) {
                         collegeevent.style.display = 'block'
+                    }
+                    else if(!college) {
+                        collegeevent.style.display = 'none'
+                        console.log("why")
                     }
                 })
             })
@@ -57,7 +62,8 @@ firebase.auth().onAuthStateChanged(async function(user) {
                     }
                 })
             })
-        }catch(err){}
+        //}catch(err){console.log(err)}
+        
         
     } else {
         try{
@@ -83,6 +89,12 @@ catch(err){}
 try {
     var update1 = document.getElementById("college");
     update1.addEventListener("click", college)
+}
+catch(err){}
+
+try {
+    var recollege = document.getElementById("removecollege");
+    recollege.addEventListener("click", removecollege)
 }
 catch(err){}
 
@@ -120,7 +132,7 @@ function signIn() {
     auth.signInWithEmailAndPassword(emaillogin.value, passwordlogin.value).then(cred => {
         console.log(cred.user)
         alert("Signed In")
-        location.reload(); 
+        
     })
 }
 
@@ -140,6 +152,18 @@ function college() {
         email: email.value,
         college: college, 
     }, {merge: true})
+}
+
+function removecollege() {
+    console.log("Trying")
+    var college = false;
+    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+
+    var setWithMerge = userRef.set({
+        email: email.value,
+        college: college, 
+    }, {merge: true})
+    location.reload()
 }
 
 function IntroToDiscord() {

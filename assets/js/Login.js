@@ -51,8 +51,14 @@ try {
 catch(err){}
 
 try {
-    var update1 = document.getElementById("college");
-    update1.addEventListener("click", college)
+    var collegeup = document.getElementById("college");
+    collegeup.addEventListener("click", college)
+}
+catch(err){}
+
+try {
+    var recollege = document.getElementById("removecollege");
+    recollege.addEventListener("click", removecollege)
 }
 catch(err){}
 
@@ -104,6 +110,16 @@ function signOut() {
 function college() {
 
     var college = true;
+    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+
+    var setWithMerge = userRef.set({
+        email: email.value,
+        college: college, 
+    }, {merge: true})
+}
+
+function removecollege() {
+    var college = false;
     var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
 
     var setWithMerge = userRef.set({

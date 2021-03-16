@@ -31,7 +31,7 @@
 <div id="wrapper-container">
 
 	<!-- Header -->
-	<header class="site-header sticky-header header-overlay layout-2">
+	<header class="site-header sticky-header layout-1">
 		<div class="header-inner element-to-stick">
 			<div class="container">
 				<div class="wrap-content-header">
@@ -47,28 +47,11 @@
 								<a href="index.html">
 									Home
 								</a>
-							</li>
-	<!--				
-							<li class="menu-item-has-children">
-								<a href="shop.html">
-									Shop
-								</a>
-								<ul class="sub-menu">
-									<li>
-										<a href="about.html">
-											Books
-										</a>
-									</li>
-								</ul>
-								-->	
+							</li>			
+							
 							<li>
 								<a href="about.html">
 									About
-								</a>
-							</li>
-							<li>
-								<a href="faq.html">
-									FAQs
 								</a>
 							</li>
 							<li>
@@ -76,18 +59,24 @@
 									Events
 								</a>
 							</li>
-<!--
-							<li >
-								<a href="blog.html">
-									Blog
-								</a>
 							
-							</li>
--->
-<li>
+							<li>
 								<a href="contact.html">
 									Contact
 								</a>
+								
+							</li>
+
+							<li >
+								<a class="logged-in" href="login-page.html">
+									My Events
+								</a>
+							</li>
+							
+							<li>
+								<button class="logged-in" id="signOut" name="signOut">
+									Signout
+								</button>
 							</li>
 						</ul>
 					</nav>
@@ -109,17 +98,14 @@
 							</div>
 						</div>
 
-
-
 						<!-- shortcode login popup -->
-						<div class="element-login-popup layout-1">
+						<div  class="element-login-popup layout-1">
 							<div class="login-links">
-								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">Login</a>
+								<a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login" class="logged-out" >Login</a>
 							</div>
 
 							<div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide">
 								<div class="loginwrapper">
-									<!-- form register -->
 									<div class="login-popup box-register">
 
 										<div class="inner-login">
@@ -149,13 +135,9 @@
 															<input type="password" id="password" name="user_password" placeholder="Password"  class="input">
 														</p>
 
-														<p class="text-mail">
-															We send your registration email to this address.
-														</p>
 
 														<p class="button-submit">
-															<input type="submit" id="signUp" name="wp-submit" class="button button-primary button-large" value="Register"/>
-															<input type="hidden" name="redirect_to" value=""/>
+															<input style="cursor: pointer;background-color: rgb(186, 1, 25);text-align: center" id="signUp" name="wp-submit" class="button button-primary button-large" value="Register"/>
 														</p>
 													</form>
 												</div>
@@ -185,11 +167,11 @@
 														</p>
 
 														<p class="login-email">
-															<input type="email" id="email" name="user_email" placeholder="Email"   class="input">
+															<input type="email" id="emaillogin" name="user_email" placeholder="Email"   class="input">
 														</p>
 
 														<p class="login-password">
-															<input type="password" id="password" name="user_password" placeholder="Password"  class="input">
+															<input type="password" id="passwordlogin" name="user_password" placeholder="Password"  class="input">
 														</p>
 
 														<p class="login-remember">
@@ -197,24 +179,26 @@
 														</p>
 
 														<p class="button-submit">
-															<input type="submit" id="signIn" name="wp-submit" class="button button-primary button-large" value="Login"/>
-															<input type="hidden" name="redirect_to" value=""/>
+															<input readonly style="cursor: pointer;background-color: rgb(186, 1, 25);text-align: center" id="signIn" name="wp-submit" class="button button-primary button-large" value="Login"/>
 														</p>
 
-														<p class="link-bottom"><a href="#losspw" class="display-box"
+													<!--	<p class="link-bottom"><a href="#losspw" class="display-box"
 																				  data-display=".box-lostpass"></a>
 														</p>
 													</form>
 
 													<p class="link-bottom"><a href="#losspw" class="display-box"
 																			  data-display=".box-lostpass">Lost your password? </a>
+													-->
 													</p>
 												</div>
 											</div>
 										</div>
 									</div>
 									<!-- end form login -->
+
 									<!-- form lost passwords -->
+									<!--
 									<div class="login-popup box-lostpass">
 										<div class="login-popup box-lostpass">
 											<div class="media-content" style="background-image: url(assets/images/login.jpg);"></div>
@@ -249,12 +233,12 @@
 											</div>
 										</div>
 									</div>
+								-->
 									<!-- end lost passwords -->
 								</div>
 							</div>
 						</div>
 						<!-- end shortcode login -->
-
 						<!-- Button toggle menu-mobile -->
 						<div class="menu-mobile-effect navbar-toggle">
 							<div class="icon-wrap">
@@ -267,6 +251,7 @@
 			</div>
 		</div>
 	</header>
+	
 <nav class="mobile-menu-container mobile-effect">
 	<ul class="nav navbar-nav">
 		<li>
