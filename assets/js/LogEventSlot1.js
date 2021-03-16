@@ -30,12 +30,13 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 console.log(auth)
 
+
 firebase.auth().onAuthStateChanged(async function(user) {
     if (user) {
-        console.log(firebase.auth().currentUser.uid);
+        var UUIDUSER = firebase.auth().currentUser.uid
         setupUI(user)
         try {
-            firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
+            firebase.firestore().collection('users').where("uuid", "==", UUIDUSER).get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     console.log(doc.id, " => ", doc.data())
                     var data = doc.data();
@@ -59,6 +60,9 @@ firebase.auth().onAuthStateChanged(async function(user) {
                     Boolean(discord)
                     if(discord) {
                         discordevent.style.display = 'block'
+                    }
+                    if(!discord) {
+                        discordevent.style.display = 'none'
                     }
                 })
             })
@@ -124,6 +128,7 @@ function signUp() {
     }
 
 function signIn() {
+    var UUIDUSER = firebase.auth().currentUser.uid
     console.log("Loging in")
     var emaillogin = document.getElementById("emaillogin")
     var passwordlogin = document.getElementById("passwordlogin")
@@ -132,8 +137,14 @@ function signIn() {
     auth.signInWithEmailAndPassword(emaillogin.value, passwordlogin.value).then(cred => {
         console.log(cred.user)
         alert("Signed In")
-        
     })
+
+    var userRef = firebase.firestore().collection('users').doc(uuid);
+
+    var setWithMerge = userRef.set({
+        email: emaillogin.value,
+        uuid: UUIDUSER,
+    }, {merge: true})
 }
 
 function signOut() {
@@ -144,35 +155,43 @@ function signOut() {
 
 
 function college() {
-
-    var college = true;
-    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+    var UUIDUSER = firebase.auth().currentUser.uid
+    var infocollege = true;
+    console.log(infocollege)
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        email: email.value,
-        college: college, 
+        college: infocollege, 
     }, {merge: true})
 }
 
 function removecollege() {
+    var UUIDUSER = firebase.auth().currentUser.uid
     console.log("Trying")
     var college = false;
-    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        email: email.value,
         college: college, 
     }, {merge: true})
-    location.reload()
+
 }
 
 function IntroToDiscord() {
-
+    var UUIDUSER = firebase.auth().currentUser.uid
     var discord = true;
-    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        email: emaillogin.value,
+        discord: discord, 
+    }, {merge: true})
+}
+function removeIntroToDiscord() {
+    var UUIDUSER = firebase.auth().currentUser.uid
+    var discord = true;
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
+
+    var setWithMerge = userRef.set({
         discord: discord, 
     }, {merge: true})
 }

@@ -25,7 +25,8 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+const auth = firebase.auth()
+
 console.log(auth)
 
 firebase.auth().onAuthStateChanged(async function(user) {
@@ -75,6 +76,7 @@ try {
 catch(err){}
 
 function signUp() {
+    var UUIDUSER = firebase.auth().currentUser.uid
     console.log("Signed up")
     var email = document.getElementById("email")
     var password = document.getElementById("password")
@@ -88,6 +90,7 @@ function signUp() {
     }
 
 function signIn() {
+    var UUIDUSER = firebase.auth().currentUser.uid
     console.log("Loging in")
     var emaillogin = document.getElementById("emaillogin")
     var passwordlogin = document.getElementById("passwordlogin")
@@ -96,8 +99,14 @@ function signIn() {
     auth.signInWithEmailAndPassword(emaillogin.value, passwordlogin.value).then(cred => {
         console.log(cred.user)
         alert("Signed In")
-        location.reload(); 
     })
+
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
+
+    var setWithMerge = userRef.set({
+        email: emaillogin.value,
+        uuid: UUIDUSER,
+    }, {merge: true})
 }
 
 function signOut() {
@@ -108,33 +117,31 @@ function signOut() {
 
 
 function college() {
-
+    var UUIDUSER = firebase.auth().currentUser.uid
     var college = true;
-    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        email: email.value,
         college: college, 
     }, {merge: true})
 }
 
 function removecollege() {
+    var UUIDUSER = firebase.auth().currentUser.uid
     var college = false;
-    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        email: email.value,
         college: college, 
     }, {merge: true})
 }
 
 function IntroToDiscord() {
-
+    var UUIDUSER = firebase.auth().currentUser.uid
     var discord = true;
-    var userRef = firebase.firestore().collection('users').doc(emaillogin.value);
+    var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        email: emaillogin.value,
         discord: discord, 
     }, {merge: true})
 }
