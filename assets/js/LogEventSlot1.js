@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     if (user) {
         console.log(firebase.auth().currentUser.uid);
         setupUI(user)
-        //try {
+        try {
             firebase.firestore().collection('users').where("email", "==", emaillogin.value).get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     console.log(doc.id, " => ", doc.data())
@@ -62,7 +62,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
                     }
                 })
             })
-        //}catch(err){console.log(err)}
+        }catch(err){console.log(err)}
         
         
     } else {
