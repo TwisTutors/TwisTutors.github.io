@@ -128,7 +128,6 @@ function signUp() {
     }
 
 function signIn() {
-    var UUIDUSER = firebase.auth().currentUser.uid
     console.log("Loging in")
     var emaillogin = document.getElementById("emaillogin")
     var passwordlogin = document.getElementById("passwordlogin")
@@ -137,14 +136,15 @@ function signIn() {
     auth.signInWithEmailAndPassword(emaillogin.value, passwordlogin.value).then(cred => {
         console.log(cred.user)
         alert("Signed In")
+        var UUIDUSER = firebase.auth().currentUser.uid
+        var userRef = firebase.firestore().collection('users').doc(uuid);
+    
+        var setWithMerge = userRef.set({
+            email: emaillogin.value,
+            uuid: UUIDUSER,
+        }, {merge: true})
     })
-
-    var userRef = firebase.firestore().collection('users').doc(uuid);
-
-    var setWithMerge = userRef.set({
-        email: emaillogin.value,
-        uuid: UUIDUSER,
-    }, {merge: true})
+    
 }
 
 function signOut() {
