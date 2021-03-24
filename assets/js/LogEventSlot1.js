@@ -125,6 +125,16 @@ function signUp() {
     auth.signOut()
     alert("Please Sign In now")
 
+    var UUIDUSER = firebase.auth().currentUser.uid
+    var userRef = firebase.firestore().collection('users').doc(uuid);
+
+    var setWithMerge = userRef.set({
+        email: emaillogin.value,
+        college: false,
+        discord: false,
+        uuid: UUIDUSER,
+    }, {merge: true})
+
     }
 
 function signIn() {
@@ -155,15 +165,29 @@ function signOut() {
 
 
 function college() {
+    const collegeevent = firebase.firestore().collection('collegesignups').where("collegesignups").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            console.log(doc.id, " => ", doc.data())
+            var data = doc.data();
+            var collegesignups = data.collegesignups;
+            return collegesignups
+        })
+
+    var collegesignupsadded = collegesignups + 1 
     var UUIDUSER = firebase.auth().currentUser.uid
-    var infocollege = true;
-    console.log(infocollege)
+    var college = true;
     var userRef = firebase.firestore().collection('users').doc(UUIDUSER);
 
     var setWithMerge = userRef.set({
-        college: infocollege, 
+        college: college, 
     }, {merge: true})
-}
+
+    var userRef = firebase.firestore().collection('collegesignups').doc(collegesignups);
+
+    var setWithMerge = userRef.set({
+        collegesignups: collegesignupsadded,
+    }, {merge: true})
+})
 
 function removecollege() {
     var UUIDUSER = firebase.auth().currentUser.uid
@@ -194,4 +218,4 @@ function removeIntroToDiscord() {
     var setWithMerge = userRef.set({
         discord: discord, 
     }, {merge: true})
-}
+}}
