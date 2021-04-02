@@ -14950,7 +14950,6 @@ form#registerform .wp-social-login-widget .wp-social-login-connect-with {
     font-size: 15px;
     font-weight: normal;
 }
-
 form#registerform .wp-social-login-widget .wp-social-login-connect-with:before, form#registerform .wp-social-login-widget .wp-social-login-connect-with:after {
     position: absolute;
     top: 50%;
@@ -14968,7 +14967,6 @@ form#registerform .wp-social-login-widget .wp-social-login-connect-with:before {
 form#registerform .wp-social-login-widget .wp-social-login-connect-with:after {
     right: 0;
 }
-
 form#registerform .button-submit {
     margin-top: 25px;
 }
