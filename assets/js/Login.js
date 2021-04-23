@@ -22,15 +22,31 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+var app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
+db = firebase.firestore(app);
 
 console.log(auth)
+
+
+db.collection("Discord")
+.get()
+.then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data().users);
+        document.getElementById("discordusers").innerHTML = doc.data().users
+    });
+})
+.catch((error) => {
+    console.log("Error getting documents: ", error);
+});
+
 
 firebase.auth().onAuthStateChanged(async function(user) {
     if (user) {
         console.log(firebase.auth().currentUser.uid);
         setupUI(user)
+
         
     } else {
         setupUI()
